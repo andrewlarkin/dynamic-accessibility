@@ -14,4 +14,5 @@ class ApplicationController < ActionController::Base
       return @current_participant if defined?(@current_participant)
       @current_participant = current_participant_session && current_participant_session.participant
     end
+
 end

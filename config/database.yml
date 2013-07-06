@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 development:
   adapter: postgresql
   database: dynamic_access
