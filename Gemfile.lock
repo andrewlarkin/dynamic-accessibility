@@ -169,3 +169,4 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   xooie (~> 1.0.0)
+
