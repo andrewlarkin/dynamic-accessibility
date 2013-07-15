@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  completed_task_id: 1
+  error_id: 1
+  error_count: 1
+
+two:
+  completed_task_id: 1
+  error_id: 1
+  error_count: 1

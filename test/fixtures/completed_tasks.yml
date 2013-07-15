@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  rating: 1
+  feedback: MyString
+  completed: false
+  time: 1
+  success_rate: 1
+  participant_id: 1
+  task_id: 1
+
+two:
+  rating: 1
+  feedback: MyString
+  completed: false
+  time: 1
+  success_rate: 1
+  participant_id: 1
+  task_id: 1

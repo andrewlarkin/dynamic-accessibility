@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  email: MyString
+  disability: MyString
+  tech_ability: MyString
+  device: MyString
+  username: MyString
+  password: MyString
+  prof_level: 1
+
+two:
+  email: MyString
+  disability: MyString
+  tech_ability: MyString
+  device: MyString
+  username: MyString
+  password: MyString
+  prof_level: 1
