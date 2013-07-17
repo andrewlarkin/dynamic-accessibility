@@ -10,7 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= requrie require_config
-//= require require
-//= require jquery
-//= require xooie_manifest
+//= xooie
+//= xooie/base
+//= xooie/carousel
+//= xooie/dropdown
+//= xooie/tab
+//= xooie/dialog
+//= xooie/stylesheet
+//= xooie/addons/base
+//= xooie/dropdown/accordion
