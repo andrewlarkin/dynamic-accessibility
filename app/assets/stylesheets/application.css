@@ -9,5 +9,11 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
+ *= require _mixins
+ *= require _variables
+ *= require normalize
+ *= require fonts
+ *= requirebase
+ *= require_tree ./tasks
+ *= require_tree ./forms
  */
