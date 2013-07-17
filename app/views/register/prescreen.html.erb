@@ -1,0 +1,97 @@
+<% content_for :body do %>
+    <p>Thank you for your interest in participating in this trial.  By completing this form, you are submitting yourself to be considered as a participant for a two-week trial that will seek to investigate the effectiveness of a new technique for improving user interfaces on the Internet.  Please understand that, by completing this form, you are not obligating yourself in any way to participate in this trial.  Also understand that completing this form does not guarantee participation in the trial, as participants will be selected so as to maintain an even distribution of age, technical expertise and ability.</p> 
+
+    <P>If selected, you will be asked to commit to a two-week trial that will involve completing a series of tasks on a website.  These tasks will be sent via e-mail and will need to be completed within a 24 hour period.  Participants will not be asked to complete more than one task at a time, and completion of the task should require no longer than 20 minutes.</p>
+
+    <p>Each participant will be compensated with a $15 iTunes gift card.</p> 
+
+    <form>
+        <fieldset id="ps">
+            <label for="ps_age">What is your age?</label>
+            <input id="ps_age" name="age" aria-required="true" required />
+
+            <label for="ps_email">What is your email address</label>
+            <input id="ps_email" name="email" aria-required="true" required aria-describedby="ps_email_explain"/>
+            <p id="ps_email_explain">Your email address will be used to contact you should you be selected as a participant.  No personal information will be associated with your email address and the email address will be removed from our systems once the trial is complete.</p>
+        
+            <label for="ps_skill">Rate your expertise with technology:</label>
+            <select id="ps_skill" name="skill" aria-required="true" required>
+                <option value="novice">Novice</option>
+                <option value="novice">Beginner</option>
+                <option value="novice">Familiar</option>
+                <option value="novice">Proficient</option>
+                <option value="novice">Expert</option>
+            </select>
+
+            <label for="ps_device">What device do you use most to access the internet?</label>
+            <select id="ps_device" name="device">
+                <option value="unknown">I don't know</option>
+                <optgroup label="Smartphone">
+                    <option value="iphone">iPhone</option>
+                    <option value="android">Android</option>
+                    <option value="windows_phone">Windows Phone</option>
+                    <option value="other_smartphone">Other Smartphone</option>
+                </optgroup>
+                <optgroup label="Tablet">
+                    <option value="ipad">iPad</option>
+                    <option value="android_tablet">Android Tabled</option>
+                    <option value="surface">Microsoft Surface</option>
+                    <option value="kindle_fire">Kindle Fire</option>
+                    <option value="other_tablet">Other Tablet</option>
+                </optgroup>
+                <optgroup label="Desktop or Laptop">
+                    <option value="mac_osx">Mac OSX</option>
+                    <option value="windows">Windows</option>
+                    <option value="linux">Linux</option>
+                    <option value="other_desktop">Other Desktop</option>
+                </optgroup>
+                
+                <option value="other">Other Device</option>
+            </select>
+
+            <label for="ps_device_other">If you selected "other", please describe your device</label>
+            <textarea id="ps_device_other" name="device_description"></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Do you identify as having any of the following disabilities? (optional)</legend>
+            <input id="ps_disability_blind" type="checkbox" name="disability" value="blind" />
+            <label for="ps_disability_blind">Blind</label>
+
+            <input id="ps_disability_low_vision" type="checkbox" name="disability" value="low_vision" />
+            <label for="ps_disability_low_vision">Low Vision</label>
+
+            <input id="ps_disability_deaf" type="checkbox" name="disability" value="deaf" />
+            <label for="ps_disability_deaf">Deaf</label>
+
+            <input id="ps_disability_hard_of_hearing" type="checkbox" name="disability" value="hard_of_hearing" />
+            <label for="ps_disability_hard_of_hearing">Hard of Hearing</label>
+
+            <input id="ps_disability_color_blind" type="checkbox" name="disability" value="color_blind" />
+            <label for="ps_disability_color_blind">Color Blind</label>
+
+            <input id="ps_disability_limited_mobility" type="checkbox" name="disability" value="limited_mobility" />
+            <label for="ps_disability_limited_mobility">Limited Mobility</label>
+
+            <input id="ps_disability_none" type="checkbox" name="disability" value="none" />
+            <label for="ps_disability_none">None</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Does your device have a camera?</legend>
+
+            <input id="ps_camera_yes" type="radio" name="skill" value="yes" />
+            <label for="ps_camera_yes">Yes</label>
+
+            <input id="ps_camera_no" type="radio" name="skill" value="no" checked />
+            <label for="ps_camera_no">No</label>
+
+            <p>Some tasks require the use of your device’s built-in camera.  In these instances, you will be informed that the camera is in use and no images will be transmitted or stored.</p>
+        </fieldset>
+
+        <button type="submit" alt="Click to submit your information">Register</button>
+    </form>
+
+    <p>If you have any questions or concerns please contact Andrew Larkin at <a href="mailto:alarkin2@villanova.edu" target="_blank">alarkin2@villanova.edu</a></p>
+
+<% end %>
