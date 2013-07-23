@@ -1,0 +1,43 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+body {
+    font-family: Helvetica Neue, Arial, sans-serif;
+    background-color: $almost_black;
+    color: $almost_white;
+    font-size: $normal;
+}
+
+a {
+    color: $blue;
+
+    &:hover,
+    &:focus {
+        color: $light_blue;
+    }
+}
+
+.da-h1 {
+    @include headings;
+    font-family: 'JosefinSansThin';
+    font-size: $heading_large;
+}
+
+.da-h2 {
+    @include headings;
+    font-family: 'JosefinSansThin';
+    font-size: $heading_medium;
+}
+
+.da-h3 {
+    @include headings;
+    font-family: 'JosefinSansThin';
+    font-size: $heading_small;
+    padding-bottom: base(2);
+    border-bottom: 1px solid $almost_white;
+}
+
+.da-content {
+    padding: $page_margins;
+}

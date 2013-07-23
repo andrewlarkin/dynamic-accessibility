@@ -1,0 +1,8 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+[class^="icon-"]::before, 
+[class*="icon-"]::before {
+    
+}

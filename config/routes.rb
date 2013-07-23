@@ -3,12 +3,15 @@ DynamicAccessibility::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'register#index'
+  root 'main#index'
 
-  scope 'register' do
-    get 'prescreen' => 'register#prescreen'
-  end
+  resources :participants
 
+  get 'register' => 'participants#index'
+
+  get 'about' => 'main#about'
+  get 'resources' => 'main#resources'
+  get 'login' => 'login#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

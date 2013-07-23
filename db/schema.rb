@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130711112808) do
+ActiveRecord::Schema.define(version: 20130723042900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,14 +44,21 @@ ActiveRecord::Schema.define(version: 20130711112808) do
 
   create_table "participants", force: true do |t|
     t.string   "email"
-    t.string   "disability"
-    t.string   "tech_ability"
     t.string   "device"
     t.string   "username"
     t.string   "password"
     t.integer  "prof_level"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "age"
+    t.integer  "tech_ability"
+    t.boolean  "is_deaf",             default: false
+    t.boolean  "is_hard_of_hearing",  default: false
+    t.boolean  "is_blind",            default: false
+    t.boolean  "is_low_vision",       default: false
+    t.boolean  "is_color_blind",      default: false
+    t.boolean  "is_limited_mobility", default: false
+    t.boolean  "is_other_disability", default: false
   end
 
   create_table "task_sets", force: true do |t|

@@ -1,0 +1,12 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.da-header {
+    padding: base(4) $page_margin_side base(3);
+    border-bottom: $light_border;
+
+    .da-h1 {
+        font-size: $huge;
+    }
+}

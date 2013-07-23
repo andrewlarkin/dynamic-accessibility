@@ -1,0 +1,22 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.da-nav {
+    border-bottom: $light_border;
+    padding: $page_margins;
+    margin-bottom: base(3);
+}
+
+.da-nav-list {
+    @include inline-lists;
+}
+
+.da-nav-list-item {
+    display: inline-block;
+    border-left: $light_border;
+
+    &:last-child {
+        border-right: $light_border;
+    }
+}

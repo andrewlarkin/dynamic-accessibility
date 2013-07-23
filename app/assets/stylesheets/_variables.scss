@@ -3,12 +3,45 @@
 
 // Color Scheme
 
-$black: #ffffff;
+$black: #000000;
 $almost_black: #1B1B1C;
-
-$grey: #434345;
+$dark_grey: #434345;
+$grey: #7E7E82;
+$light_grey: #C6C6CC;
+$almost_white: #E3E3EB;
+$white: #ffffff;
 
 $blue: #0591AB;
 $light_blue: #07C9D4;
 $turquoise: #4DD6BB;
 
+// Sizes
+$huge: 46px;
+$xlarge: 36px;
+$large: 24px;
+$normal: 14px;
+$small: 12px;
+$tiny: 10px;
+
+$heading_large: 36px;
+$heading_medium: 32px;
+$heading_small: 26px;
+
+// Measurements
+
+$base_distance: 5px;
+
+$page_margin_side: base(6);
+$page_margin_top: 0;
+$page_margins: $page_margin_top $page_margin_side;
+
+// Links
+
+$link-focus-glow-color: $turquoise;
+$link-focus-glow-offset: 0px;
+$link-focus-glow-blur: 5px;
+
+// Other
+
+$light_border: 1px solid $light_grey;
+$dark_border: 1px solid $dark_grey;

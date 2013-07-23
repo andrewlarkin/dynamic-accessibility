@@ -1,1 +1,62 @@
 @import 'compass';
+
+@mixin headings {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+// Links and Buttons
+
+@mixin links {
+    text-decoration: none;
+    color: $white;
+    @include color-transition;
+
+    &:hover,
+    &:focus {
+        color: $light-blue;
+    }
+
+    &:focus {
+        outline: 0;
+        @include single-box-shadow(
+            $link-focus-glow-color,
+            $link-focus-glow-offset,
+            $link-focus-glow-offset,
+            $link-focus-glow-blur);
+    }
+}
+
+// Transitions
+
+@mixin color-transition {
+    @include single-transition(color, 0.2s, ease-in, 0);
+}
+
+@mixin bg-transition {
+    @include single-transition(background-color, 0.2s, ease-in, 0);
+}
+
+// Lists
+
+@mixin basic-lists {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@mixin inline-lists {
+    @include basic-lists;
+    font-size: 0;
+
+    li {
+        font-size: $normal;
+    }
+}
+
+// Functions
+
+@function base($multiplier) {
+    @return $base_distance * $multiplier
+}

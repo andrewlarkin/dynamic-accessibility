@@ -1,0 +1,31 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.da-register {
+    color: $almost_black;
+    background-color: $almost_white;
+    @include border-radius(base(2));
+    padding: base(3);
+
+    fieldset {
+        margin-bottom: base(3);
+    }
+}
+
+.da-list {
+    @include basic-lists; 
+}   
+
+.da-list-item {
+    border-top: $dark-border;
+    padding: base(2) base(1);
+
+    &:last-child {
+        border-bottom: $dark-border;
+    }
+}
+
+.da-register-entry {
+    margin-bottom: base(2);
+}

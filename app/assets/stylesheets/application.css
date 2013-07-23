@@ -12,8 +12,8 @@
  *= require _mixins
  *= require _variables
  *= require normalize
- *= require fonts
- *= requirebase
+ *= require base
  *= require_tree ./tasks
- *= require_tree ./forms
+ *= require_tree ./pages
+ *= require_tree ./components
  */
