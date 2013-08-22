@@ -1,0 +1,30 @@
+<% content_for :body do %>
+    <h1 class="da-h1">Trial data for: <%= @participant.email %></h1>
+
+    <table>
+        <tr>
+            <th>Trial</th>
+            <th>Percentage Complete</th>
+            <th></th>
+        </tr>
+        <% @task_sets.each do |set| %>
+
+            <% 
+            completed_count = 0
+
+            if !@participant[:completed_tasks].nil?
+                @participant[:completed_tasks].each do |task|
+                    if task[:task_set] === set
+                        completed_count += 1
+                    end
+                end
+            end %>
+
+            <tr>
+                <td><%= set.name %></td>
+                <td><%= completed_count/4 %></td>
+                <td><button class="da-button">Start Task</button></td>
+            </tr>
+        <% end %>
+    </table>
+<% end %>

@@ -4,9 +4,18 @@ class ParticipantsController < ApplicationController
     @participant = Participant.new
   end
 
+  def show
+    # validate the id against session token
+    # if not valid, redirect to /login
+
+    @participant = Participant.find(params[:id])
+
+    @task_sets = TaskSet.all
+  end
+
   def create
     participant_params
-    puts params[:participant]
+
     @participant = Participant.new(params[:participant])
 
     respond_to do |format|

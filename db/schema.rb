@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130723042900) do
+ActiveRecord::Schema.define(version: 20130822112701) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 20130723042900) do
   create_table "participants", force: true do |t|
     t.string   "email"
     t.string   "device"
-    t.string   "username"
     t.string   "password"
     t.integer  "prof_level"
     t.datetime "created_at"
@@ -59,6 +58,13 @@ ActiveRecord::Schema.define(version: 20130723042900) do
     t.boolean  "is_color_blind",      default: false
     t.boolean  "is_limited_mobility", default: false
     t.boolean  "is_other_disability", default: false
+    t.string   "persistence_token"
+  end
+
+  create_table "sessions", force: true do |t|
+    t.integer "participant_id"
+    t.date    "expires"
+    t.string  "token"
   end
 
   create_table "task_sets", force: true do |t|

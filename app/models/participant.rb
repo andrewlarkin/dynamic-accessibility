@@ -9,4 +9,6 @@ class Participant < ActiveRecord::Base
   # add email validation
 
   has_many :completed_tasks
+
+  acts_as_authentic
 end

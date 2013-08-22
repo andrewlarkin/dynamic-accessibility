@@ -36,6 +36,11 @@
             </li>
 
             <li class="da-list-item">
+                <%= f.label :password, :class => 'da-form-label' %>
+                <%= f.password_field :password, :class => 'da-input', :'aria-required' => true %>
+            </li>
+
+            <li class="da-list-item">
                 <%= f.label :tech_ability, :class => 'da-form-label' %>
                 <%= f.select :tech_ability, options_for_select([['Novice', 1], ['Beginner', 2], ['Intermediate', 3], ['Proficient', 4], ['Expert', 5]]) %>
             </li>
@@ -50,32 +55,6 @@
                 ]) %>
             </li>
         </ol>
-
-        <fieldset class="da-form-fieldset">
-            <legend class="da-form-label">Do you identify as having any of the following disabilities? (optional)</legend>
-
-            
-            <%= f.check_box :is_blind %>
-            <%= f.label :is_blind, 'Blindness', :class => 'da-form-label'  %>
-
-            <%= f.check_box :is_low_vision, {}, true, false %>
-            <%= f.label :is_low_vision, 'Low Vision', :class => 'da-form-label'  %>
-
-            <%= f.check_box :is_deaf, {}, true, false %>
-            <%= f.label :is_deaf, 'Deaf', :class => 'da-form-label'  %>
-
-            <%= f.check_box :is_hard_of_hearing, {}, true, false %>
-            <%= f.label :is_hard_of_hearing, 'Hard of Hearing', :class => 'da-form-label'  %>
-
-            <%= f.check_box :is_color_blind, {}, true, false %>
-            <%= f.label :is_color_blind, 'Color Blindness', :class => 'da-form-label'  %>
-
-            <%= f.check_box :is_limited_mobility, {}, true, false %>
-            <%= f.label :is_limited_mobility, 'Limited Mobility', :class => 'da-form-label'  %>
-
-            <%= f.check_box :is_other_disability, {}, true, false %>
-            <%= f.label :is_other_disability, 'Other Disability', :class => 'da-form-label'  %>
-        </fieldset>
 
         <button class="da-button" type="submit" value="submit" alt="Submit your information">Submit</button>
     <% end %>
