@@ -6,13 +6,14 @@ DynamicAccessibility::Application.routes.draw do
   root 'main#index'
 
   resources :participants
-  resoruces :participant_session
+  resources :participant_sessions
 
   get 'register' => 'participants#index'
 
   get 'about' => 'main#about'
   get 'resources' => 'main#resources'
-  get 'login' => 'participants#new'
+  get 'login' => 'participant_sessions#new'
+  get 'logout' => 'participant_sessions#destroy'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

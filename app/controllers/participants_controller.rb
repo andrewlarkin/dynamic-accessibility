@@ -5,10 +5,15 @@ class ParticipantsController < ApplicationController
   end
 
   def show
-    # validate the id against session token
-    # if not valid, redirect to /login
+    if current_participant.nil?
+      redirect_to "/login"
+    end
 
     @participant = Participant.find(params[:id])
+
+    if @participant != current_participant
+      redirect_to current_participant
+    end
 
     @task_sets = TaskSet.all
   end
