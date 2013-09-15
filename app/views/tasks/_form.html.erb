@@ -1,0 +1,6 @@
+<%= form_tag({controller: "tasks", action: "create"}, method: "post") do %>
+    <% @activity['fields'].each_key do |field| %>
+        <%= label_tag field %>
+        <%= text_field_tag field %>
+    <% end %>
+<% end %>

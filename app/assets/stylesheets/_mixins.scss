@@ -6,6 +6,11 @@
     font-weight: normal;
 }
 
+@mixin headings_dark {
+    @include headings;
+    color: $almost_black;
+}
+
 // Links and Buttons
 
 @mixin links {

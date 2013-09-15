@@ -1,0 +1,17 @@
+<% content_for :body do %>
+    
+    <div class="da-task">
+        <div class="da-task-instructions">
+            <h2 class="da-dark-h2">Instructions</h2>
+
+            <%= @activity['instructions'] %>
+        </div>
+
+        <div class="da-task-container">
+            <%= render ("tasks/" + @activity['type']) %>
+        </div>
+    </div>
+
+    <button class="da-button">Skip Task</button>
+
+<% end %>

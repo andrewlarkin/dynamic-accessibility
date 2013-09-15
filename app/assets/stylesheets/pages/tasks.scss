@@ -1,0 +1,29 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.da-task {
+    position: relative;
+    background-color: adjust_lightness($yellow, 30);
+    width: 800px;
+    border: 1px solid $yellow;
+    margin-bottom: base(2);
+}
+
+.da-task-instructions {
+    position: absolute;
+    display: block;
+    bottom: 0;
+    top: 0;
+    width: base(60);
+    padding: base(2);
+    border-right: $dark_border;
+    @include box-sizing(border-box);
+}
+
+.da-task-container {
+    min-height: 600px;
+    margin-left: base(60);
+    padding: base(2);
+    color: $almost_black;
+}

@@ -15,7 +15,7 @@ class ParticipantsController < ApplicationController
       redirect_to current_participant
     end
 
-    @task_sets = TaskSet.all
+    @tasks = Task.all
   end
 
   def create

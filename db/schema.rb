@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130825002542) do
+ActiveRecord::Schema.define(version: 20130907154436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,9 @@ ActiveRecord::Schema.define(version: 20130825002542) do
     t.boolean  "is_other_disability", default: false
     t.string   "persistence_token"
     t.string   "password"
+    t.boolean  "consent"
+    t.datetime "last_request_at"
+    t.boolean  "is_selected",         default: false
   end
 
   create_table "sessions", force: true do |t|
@@ -68,19 +71,13 @@ ActiveRecord::Schema.define(version: 20130825002542) do
     t.string  "token"
   end
 
-  create_table "task_sets", force: true do |t|
-    t.string   "name"
-    t.string   "is_active"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "tasks", force: true do |t|
-    t.string   "type"
-    t.string   "description"
-    t.integer  "task_set_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
+    t.boolean  "is_active"
+    t.integer  "count"
+    t.integer  "complete"
   end
 
 end

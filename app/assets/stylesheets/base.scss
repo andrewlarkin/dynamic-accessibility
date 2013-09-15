@@ -18,25 +18,37 @@ a {
     }
 }
 
-.da-h1 {
+[class^=da-h] {
     @include headings;
-    font-family: 'JosefinSansThin';
+}
+
+[class^=da-dark-h] {
+    @include headings_dark;
+}
+
+[class*=h1] {
     font-size: $heading_large;
+    font-family: 'JosefinSansThin';
 }
 
-.da-h2 {
-    @include headings;
-    font-family: 'JosefinSansThin';
-    font-size: $heading_medium;
+[class*=h2] {
+    font-size: $large;
 }
 
-.da-h3 {
-    @include headings;
-    font-family: 'JosefinSansThin';
-    font-size: $heading_small;
+[class*=h3] {
+    font-size: $normal;
     padding-bottom: base(2);
+}
+
+[class^=da-h3] {
     border-bottom: 1px solid $almost_white;
 }
+
+[class^=da-dark-h3] {
+    border-bottom: 1px solid $almost_black;
+}
+
+
 
 .da-content {
     padding: $page_margins;

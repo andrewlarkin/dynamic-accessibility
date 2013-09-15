@@ -7,24 +7,16 @@
             <th>Percentage Complete</th>
             <th></th>
         </tr>
-        <% @task_sets.each do |set| %>
+        <% @tasks.each do |task| %>
 
-            <% 
-            completed_count = 0
+            <% if task.is_active %>
+                <tr>
+                    <td><%= task.name %></td>
+                    <td><%= task.complete/task.count %></td>
+                    <td><button class="da-button">Start Task</button></td>
+                </tr>
+            <% end %>
 
-            if !@participant[:completed_tasks].nil?
-                @participant[:completed_tasks].each do |task|
-                    if task[:task_set] === set
-                        completed_count += 1
-                    end
-                end
-            end %>
-
-            <tr>
-                <td><%= set.name %></td>
-                <td><%= completed_count/4 %></td>
-                <td><button class="da-button">Start Task</button></td>
-            </tr>
         <% end %>
     </table>
 <% end %>

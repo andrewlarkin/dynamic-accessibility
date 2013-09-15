@@ -7,6 +7,8 @@ DynamicAccessibility::Application.routes.draw do
 
   resources :participants
   resources :participant_sessions
+  resources :consent
+  resources :tasks
 
   get 'register' => 'participants#index'
 

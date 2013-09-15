@@ -11,6 +11,6 @@ class Participant < ActiveRecord::Base
   has_many :completed_tasks
 
   acts_as_authentic do |c|
-    c.logout_on_timeout = 24.hours
+    c.logged_in_timeout = 24.hours
   end
 end

@@ -1,0 +1,63 @@
+id: 1
+activities:
+    - type: form
+      instructions: Fill out the form using the following information
+      fields:
+        first_name: John
+        last_name: Smith
+        street_1: 65 South Church St
+        street_2: ""
+        city: Lancaster
+        state: PA
+        zip: 17601
+        phone: 555-344-5682
+        email: john_smith445@email.com
+
+    - type: post
+      instructions: Like the post where someone found some money.
+      target: 3
+      mesages:
+        - name: Susan Blanchett
+          time: 5:21
+          message: I just got a new puppy!  Very excited!
+
+        - name: Jeremy Jones
+          time: 5:15
+          message: Going to Las Vegas.  Hope I don't loose all my money lol.
+
+        - name: John Smith
+          time: 4:45
+          message: Just found $20 in my pocket while doing the laundry!
+
+        - name: Harris Finch
+          time: 3:31
+          message: Not looking forward to having to drive six hours.  Ugh.
+
+    - type: image
+      instructions: 
+      target: 5
+
+    - type: link
+      instructions: 
+      paragraph: 
+      link: 
+
+    - type: shopping
+      instructions: 
+      target: 
+      images:
+        - src: 
+          label: 
+
+        - src: 
+          label: 
+
+    - type: download
+      instructions:
+      target:
+      categories:
+        - name:
+          images: []
+
+        - name:
+          images: []
