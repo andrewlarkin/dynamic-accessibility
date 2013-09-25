@@ -5,3 +5,11 @@ development:
   password: Wibble01
   host: localhost
   port: 5432
+
+production:
+  adapter: postgresql
+  database: d5bu1dl7gcdlc0
+  username: dmqoxewifyohgz
+  password: fP1agQTaGw_cuIjxEFSqpYUxAO
+  host: ec2-54-235-155-182.compute-1.amazonaws.com
+  port: 5432
