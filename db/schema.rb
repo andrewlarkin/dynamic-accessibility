@@ -11,21 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130907154436) do
+ActiveRecord::Schema.define(version: 20130925032729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "completed_tasks", force: true do |t|
-    t.integer  "rating"
-    t.string   "feedback"
-    t.boolean  "completed"
     t.integer  "time"
     t.integer  "success_rate"
     t.integer  "participant_id"
     t.integer  "task_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "error_rate"
+    t.integer  "activity_id"
+    t.integer  "subjective_rating"
   end
 
   create_table "error_rates", force: true do |t|
@@ -51,18 +51,12 @@ ActiveRecord::Schema.define(version: 20130907154436) do
     t.datetime "updated_at"
     t.string   "age"
     t.integer  "tech_ability"
-    t.boolean  "is_deaf",             default: false
-    t.boolean  "is_hard_of_hearing",  default: false
-    t.boolean  "is_blind",            default: false
-    t.boolean  "is_low_vision",       default: false
-    t.boolean  "is_color_blind",      default: false
-    t.boolean  "is_limited_mobility", default: false
-    t.boolean  "is_other_disability", default: false
     t.string   "persistence_token"
     t.string   "password"
     t.boolean  "consent"
     t.datetime "last_request_at"
-    t.boolean  "is_selected",         default: false
+    t.boolean  "is_selected",       default: false
+    t.string   "group"
   end
 
   create_table "sessions", force: true do |t|
@@ -77,7 +71,6 @@ ActiveRecord::Schema.define(version: 20130907154436) do
     t.string   "name"
     t.boolean  "is_active"
     t.integer  "count"
-    t.integer  "complete"
   end
 
 end

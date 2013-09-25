@@ -1,6 +1,8 @@
-<%= form_tag({controller: "tasks", action: "create"}, method: "post") do %>
+<%= form_tag(:id => "task") do %>
     <% @activity['fields'].each_key do |field| %>
-        <%= label_tag field %>
-        <%= text_field_tag field %>
+        <span class="da-task-form-row">
+            <%= label_tag field, nil, :class => 'da-task-label' %>
+            <%= text_field_tag field, nil, :class => 'da-task-input' %>
+        </span>
     <% end %>
 <% end %>

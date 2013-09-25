@@ -1,22 +1,26 @@
 <% content_for :body do %>
     <h1 class="da-h1">Trial data for: <%= @participant.email %></h1>
 
-    <table>
-        <tr>
-            <th>Trial</th>
-            <th>Percentage Complete</th>
-            <th></th>
-        </tr>
-        <% @tasks.each do |task| %>
+    <% if @participant.is_selected %>
+        <table>
+            <tr>
+                <th>Trial</th>
+                <th>Percentage Complete</th>
+                <th></th>
+            </tr>
+            <% @tasks.each do |task| %>
 
-            <% if task.is_active %>
-                <tr>
-                    <td><%= task.name %></td>
-                    <td><%= task.complete/task.count %></td>
-                    <td><button class="da-button">Start Task</button></td>
-                </tr>
+                <% if task.is_active %>
+                    <tr>
+                        <td><%= task.name %></td>
+                        <td><%= task.completed_tasks.where( { :participant_id => @participant.id } ).length/task.count %></td>
+                        <td><a href="/tasks/<%= task.id %>" class="da-button">Start Task</a></td>
+                    </tr>
+                <% end %>
+
             <% end %>
-
-        <% end %>
-    </table>
+        </table>
+    <% else %>
+        <p>Participants will be notified by email once they have been selected for the trial.  Thank you.</p>
+    <% end %>
 <% end %>

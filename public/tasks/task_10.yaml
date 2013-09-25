@@ -1,12 +1,12 @@
 id: 1
 activities:
     - type: form
-      instructions: Fill out the form using the following information
+      instructions: Fill out the form for
       fields:
         first_name: John
         last_name: Smith
         street_1: 65 South Church St
-        street_2: ""
+        street_2: 
         city: Lancaster
         state: PA
         zip: 17601
@@ -32,15 +32,6 @@ activities:
         - name: Harris Finch
           time: 3:31
           message: Not looking forward to having to drive six hours.  Ugh.
-
-    - type: image
-      instructions: 
-      target: 5
-
-    - type: link
-      instructions: 
-      paragraph: 
-      link: 
 
     - type: shopping
       instructions: 

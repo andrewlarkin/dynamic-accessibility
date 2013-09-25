@@ -25,13 +25,19 @@
                 <li class="da-nav-list-item">
                     <a href="/resources" class="da-button da-button-list">Accessibility Resources</a>    
                 </li>
-                <li class="da-nav-list-item">
-                    <a href="/register" class="da-button da-button-list">Register to Participate</a>    
-                </li>
                 <!-- This link should change if they are logged in -->
-                <li class="da-nav-list-item"> 
-                    <a href="/login" class="da-button da-button-list">Participant Log-in</a>    
-                </li>
+                <% if @participant.nil? %>
+                    <li class="da-nav-list-item">
+                        <a href="/register" class="da-button da-button-list">Register to Participate</a>    
+                    </li>
+                    <li class="da-nav-list-item"> 
+                        <a href="/login" class="da-button da-button-list">Participant Log-in</a>    
+                    </li>
+                <% else %>
+                    <li class="da-nav-list-item"> 
+                        <a href="/logout" class="da-button da-button-list">Log Out</a>    
+                    </li>
+                <% end %>
             </ol>
         </div>
     </nav>

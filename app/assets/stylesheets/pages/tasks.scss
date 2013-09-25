@@ -4,9 +4,8 @@
 
 .da-task {
     position: relative;
-    background-color: adjust_lightness($yellow, 30);
     width: 800px;
-    border: 1px solid $yellow;
+    border: $dark_border;
     margin-bottom: base(2);
 }
 
@@ -22,8 +21,35 @@
 }
 
 .da-task-container {
-    min-height: 600px;
+    min-height: 550px;
     margin-left: base(60);
     padding: base(2);
-    color: $almost_black;
+}
+
+.da-task-button {
+    @include links;
+}
+
+@for $i from 0 through 4 {
+    .level-#{$i} {
+        color: adjustColor($i);
+        font-size: 10px + 2px * $i;
+
+        &.da-task {
+            background-color: adjustBackground($i);
+        }
+
+        .da-task-button {
+            padding: 2px * $i;
+        }
+
+        .da-task-label {
+            margin-right: 2px * $i;
+        }
+
+        .da-task-input {
+            line-height: 10px + 2px + $i;
+            color: adjustColor($i);
+        }
+    }
 }

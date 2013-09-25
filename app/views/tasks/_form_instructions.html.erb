@@ -1,0 +1,5 @@
+
+<p><%= @activity['instructions'] %></p>
+<% @activity['fields'].each do |field| %>
+    <span class="da-task-instructions-form-value"><%= field[1] %></span>
+<% end %>

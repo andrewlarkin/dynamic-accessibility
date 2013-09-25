@@ -1,0 +1,23 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+ 
+.level-4 {
+    .da-task-label {
+        display: inline-block;
+        width: 150px;
+    }
+}
+
+@for $i from 3 through 4 {
+    .level-#{$i} {
+        .da-task-instructions-form-value {
+            display: block;
+        }
+
+        .da-task-form-row {
+            display: block;
+            padding: 2px * $i;
+        }
+    }
+}
