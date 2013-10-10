@@ -60,6 +60,27 @@
     }
 }
 
+@mixin horizontal-list {
+    display: inline-block;
+    @include basic-lists;
+    font-size: 0;
+
+    > li {
+        display: inline-block;
+        font-size: $normal;
+    }
+}
+
+// Icons
+
+@mixin icon {
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+}
+
 // Functions
 
 @function base($multiplier) {

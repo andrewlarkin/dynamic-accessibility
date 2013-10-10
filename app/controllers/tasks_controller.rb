@@ -9,23 +9,39 @@ class TasksController < ApplicationController
       @task = Task.find(params[:id])
 
       #TODO: get user's skill level
-      @level = 0
+      @level = 4
 
-      complete = @task.completed_tasks.where( { :participant_id => current_participant.id } ).length
+      # complete = @task.completed_tasks.where( { :participant_id => current_participant.id } ).length
+      @current_activity = 3
 
       @task_info = YAML.load_file('public/tasks/task_' + @task.id.to_s + '.yaml')
 
-      @activity = @task_info['activities'][complete]
+      @activity = @task_info['activities'][@current_activity]
     end
   end
 
   def update
-    # call method to process results and update user's data
-    # I will have: task_id, participant_id, activity_id, time, error_rate, subjective_rating and success_rate
-    completed_task = CompletedTask.new(params) 
+   
+    if !current_participant.nil?
 
-    if completed_task.save
-      redirect_to completed_task.task
+       # call method to process results and update user's data
+
+      completed_task = CompletedTask.new({ 
+        :participant_id => current_participant.id,
+        :task_id => params[:task_id],
+        :activity_id => params[:activity_id],
+        :error_rate => params[:error_rate],
+        :success_rate => params[:success_rate],
+        :time => params[:time]
+      }) 
+
+      respond_to do |format|
+        if completed_task.save
+          format.html { redirect_to completed_task.task, :notice =>'Task completed' }
+        else
+          format.html{ render '/tasks/' + params[:task_id] }
+        end
+      end
     end
   end
 

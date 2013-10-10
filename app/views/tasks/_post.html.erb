@@ -1,0 +1,13 @@
+<ul class="da-post" data-target="#{@activity['target']}">
+    <% @activity['messages'].each do | message | %>
+        <li class="da-post-item">
+            <%= image_tag "/assets/avatar/#{message['avatar']}.png", :class => "da-post-avatar" %>
+            <div class="da-post-body">
+                <h3 class="da-post-heading"><%= message['name'] %></h3>
+                <p class="da-post-message"><%= message['message'] %></p>
+                <div class="da-post-time"><%= message['time'] %></div>
+                <button class="da-task-button da-post-like">Like</button>
+            </div>
+        </li>
+    <% end %>
+</ul>

@@ -1,0 +1,18 @@
+<div data-widget-type="tab" data-target="#{@activity['target']}">
+    <ol class="da-download-tablist">
+        <% @activity['categories'].each_with_index do |category, index| %>
+            <!-- <%= index %> -->
+            <li><button class="da-download-tab da-task-button icon-circle-arrow-down" data-x-role="tab" <% if index === 0 %>data-activate="true"<% end %>><%= category['name'] %></button></li>
+        <% end %>
+    </ol>
+
+    <% @activity['categories'].each do |category| %>
+        <div class="da-download-tabpanel" data-x-role="tabpanel">
+            <% category['images'].each do |image| %>
+                <button class="da-download-button">
+                    <%= image_tag "#{category['path']}/#{image}.jpg", :class => "da-download-img"  %>
+                </button>
+            <% end %>
+        </div>
+    <% end %>
+</div>

@@ -11,6 +11,8 @@ DynamicAccessibility::Application.routes.draw do
   resources :consent
   resources :tasks
 
+  post 'submit' => 'tasks#update'
+
   get 'register' => 'participants#index'
 
   get 'about' => 'main#about'

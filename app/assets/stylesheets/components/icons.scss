@@ -2,7 +2,30 @@
 @import 'variables';
 @import 'mixins';
 
-[class^="icon-"]::before, 
-[class*="icon-"]::before {
-    
+[class^="icon-"],
+[class*=" icon-"] {
+    @include icon;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none;
+}
+
+.icon-chevron-sign-left:before {
+    content: "\f137";
+}
+
+.icon-chevron-sign-right:before {
+    content: "\f138";
+}
+
+.icon-circle-arrow-right:before {
+    content: "\f0a9";
+}
+
+.icon-circle-arrow-down:before {
+    content: "\f0ab";
 }

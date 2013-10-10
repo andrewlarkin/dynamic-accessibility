@@ -1,0 +1,51 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+$avatar_width: 75px;
+
+.da-post {
+    @include basic-lists;
+}
+
+.da-post-heading {
+    @include headings;
+}
+
+.da-post-avatar {
+    width: $avatar_width;
+    height: $avatar_width;
+    float: left;
+}
+
+@for $i from 1 through 4 {
+    .level-#{$i} {
+        .da-post-body {
+            margin-left: $avatar_width + 2px * $i
+        }
+
+        .da-post-like {
+            @include links;
+        }
+    }
+}
+
+@for $i from 2 through 4 {
+    .level-#{i} {
+
+    }
+}
+
+.level-0 {
+    .da-post-avatar {
+        display: none;
+    }
+}
+
+.level-3,
+.level-4 {
+    .da-post-item {
+        clear: both;
+        border-bottom: $light_border;
+    }
+}

@@ -14,7 +14,7 @@
     display: block;
     bottom: 0;
     top: 0;
-    width: base(60);
+    width: base(40);
     padding: base(2);
     border-right: $dark_border;
     @include box-sizing(border-box);
@@ -22,7 +22,7 @@
 
 .da-task-container {
     min-height: 550px;
-    margin-left: base(60);
+    margin-left: base(40);
     padding: base(2);
 }
 
@@ -40,6 +40,7 @@
         }
 
         .da-task-button {
+            color: adjustColor($i);
             padding: 2px * $i;
         }
 

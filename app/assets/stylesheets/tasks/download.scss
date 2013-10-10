@@ -1,0 +1,79 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.da-download-tablist {
+    @include horizontal-list;
+}
+
+.da-download-tab {
+    display: inline-block;
+}
+
+.da-download-tabpanel {
+    display: none;
+
+    &.is-tab-active {
+        display: block;
+    }
+}
+
+@for $i from 0 through 4 {
+    .level-#{$i} {
+        .da-download-tab {
+            padding: 2px + $i;
+        }
+
+        .da-download-img
+        {
+            width: 50px * $i + 75px; 
+        }
+
+        .da-download-tab {
+            font-size: 10px + 2px * $i;
+        }
+    }
+}
+
+.level-0,
+.level-1,
+.level-2 {
+    .icon-circle-arrow-down:before {
+        display: none;
+    }
+}
+
+.level-3,
+.level-4 {
+    .da-download-tab {
+        border: $dark_border;
+        position: relative;
+
+        &.is-tab-active {
+            background-color: $blue;
+            color: $white;
+
+            &:hover,
+            &:focus {
+                background-color: $light_blue;
+            }
+        }
+    }
+
+    .da-download-button {
+        border: $light_border;
+        margin: 3px;
+    }
+
+    .icon-circle-arrow-down:before {
+        display: inline-block;
+        padding-right: 4px;
+    }
+
+    .da-download-tabpanel {
+        border: $dark_border;
+        padding: 4px;
+    }
+}
+
+

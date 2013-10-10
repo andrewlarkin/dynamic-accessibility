@@ -10,12 +10,12 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= xooie
-//= xooie/base
-//= xooie/carousel
-//= xooie/dropdown
-//= xooie/tab
-//= xooie/dialog
-//= xooie/stylesheet
-//= xooie/addons/base
-//= xooie/dropdown/accordion
+//= require xooie/xooie
+//= require xooie/helpers
+//= require xooie/stylesheet
+//= require xooie/shared
+//= require xooie/event_handler
+//= require xooie/keyboard_navigation
+//= require xooie/widgets/base
+//= require xooie/widgets/carousel
+//= require xooie/widgets/tab

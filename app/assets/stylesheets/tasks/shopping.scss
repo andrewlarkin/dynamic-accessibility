@@ -1,0 +1,121 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.da-shopping {
+    position: relative;
+    padding: 0 50px;
+}
+
+.xooie-carousel-content > .da-shopping-item {
+    font-size: $normal;
+    width: 220px;
+}
+
+.xooie-carousel-content:first-child {
+    margin-left: 0;
+}
+
+[class^="da-shopping-control"] {
+    @include links;
+    color: $dark-grey;
+    position: absolute;
+    font-size: $large;
+    width: 50px;
+    height: 100px;
+    top: 10px;
+
+    &[disabled] {
+        color: $light-grey;
+    }
+}
+
+.da-shopping-control-left {
+    left: 0;
+}
+
+.da-shopping-control-right {
+    right: 0;
+}
+
+.da-shopping-title {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.da-shopping-add {
+    display: block;
+}
+
+@for $i from 0 through 4 {
+    .level-#{$i} {
+        .da-shopping-item,
+        .da-shopping-img
+        {
+            width: 50px * $i + 75px; 
+        }
+
+        .da-shopping-title {
+            max-width: 50px * $i + 75px;
+        }
+
+        .da-shopping-item {
+            margin-left: $i * 2.5px;
+        }
+    }
+}
+
+.level-4 {
+    .da-shopping-title {
+        font-size: $large;
+    }
+
+    .da-shopping-price {
+        display: block;
+        font-weight: bold;
+    }
+}
+
+@for $i from 0 through 2 {
+    .da-shopping-title,
+    .da-shopping-info {
+        font-size: $normal * 1/(4-$i) + 5px;
+    }
+}
+
+@for $i from 3 through 4 {
+    .level-#{$i} {
+        .da-shopping-img {
+            border: $dark_border;
+            box-sizing: border-box;
+        }
+
+        .da-shopping-title {
+            font-weight: bold;
+            margin: 5px 0 3px 0;
+        }
+
+        .da-shopping-info {
+            padding: 0 10px;
+        }
+
+        .da-shopping-add {
+            @include links;
+            border: $dark_border;
+            border-radius: 2px * $i;
+            padding: 2px * $i;
+            color: $almost_black;
+            margin-top: .5px * $i;
+            font-weight: bold;
+
+            &:hover,
+            &:focus {
+                border-color: $turquoise;
+            }
+        }
+    }
+}
+

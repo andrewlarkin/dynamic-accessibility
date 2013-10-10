@@ -1,0 +1,20 @@
+<div class="da-shopping" data-widget-type="carousel" data-target="#{@activity['target']}">
+    <button class="da-shopping-control-left icon-chevron-sign-left" data-x-role="control:left 1 item"></button>
+    <div>
+        <ul data-x-role="content">
+            <% @activity['items'].each do |item| %>
+                <li class="da-shopping-item">
+                    <%= image_tag "products/#{item['src']}.jpg", :class => "da-shopping-img" %>
+                    <h3 class="da-shopping-title"><%= item['title'] %></h3>
+                    <div class="da-shopping-info">
+                        <span class="da-shopping-desc"><%= item['info'] %></span>
+                        <span class="da-shopping-price"><%= item['price'] %></span>
+                        <button class="da-shopping-add" data-index="#{index}">Add to Cart</button>
+                    </div>        
+                </li>
+            <% end %>
+        </ul>
+    </div>
+
+    <button class="da-shopping-control-right icon-chevron-sign-right" data-x-role="control:right 1 item"></button>
+</div>
