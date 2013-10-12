@@ -1,6 +1,6 @@
 <% content_for :body do %>
     
-<div data-widget-type="task" data-target="<%= @activity['target'] %>" data-task-id="<%= @task.id %>" data-activity-id="<%= @current_activity %>"> 
+<div data-widget-type="<%= @activity['type'] %>" data-target="<%= @activity['target'] %>" data-task-id="<%= @task.id %>" data-activity-id="<%= @current_activity %>"> 
     <div class="da-task level-<%= @level %>">
         <div class="da-task-instructions">
             <h2 class="da-dark-h2">Instructions</h2>

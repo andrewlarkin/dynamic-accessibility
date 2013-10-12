@@ -2,7 +2,7 @@
     <% @activity['fields'].each_key do |field| %>
         <span class="da-task-form-row">
             <%= label_tag field, nil, :class => 'da-task-label' %>
-            <%= text_field_tag field, nil, :class => 'da-task-input' %>
+            <%= text_field_tag field, nil, :class => 'da-task-input', :'data-x-role' => 'forminput', :'data-target-value' => @activity['fields'][field] %>
         </span>
     <% end %>
 <% end %>
