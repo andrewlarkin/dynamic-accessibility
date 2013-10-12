@@ -16,6 +16,5 @@
 //= require jquery
 //= require xooie_config
 //= require xooie_manifest
-//= require_tree ./helpers
 //= require_tree ./pages
 //= require_tree ./tasks
