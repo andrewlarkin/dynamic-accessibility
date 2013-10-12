@@ -11,7 +11,7 @@ activities:
         state: PA
         zip: 17601
         phone: 555-344-5682
-        email: john_smith445@email.com
+        email: john_smith4@email.com
 
     - type: post
       instructions: Like the post where someone found some money.
