@@ -34,11 +34,15 @@ define('tasks/task', ['jquery', 'xooie/widgets/base', 'xooie/event_handler'], fu
 
   Task.defineRole('tasksubmit', true);
 
+  Task.prototype.checkCorrectness = function() {
+    return 0;
+  };
+
   Task.prototype.submit = function() {
-
-    // get stop time
-
+    
     var time = new Date() - this._startTime;
+
+    this.checkCorrectness();
 
     $.ajax({
       url: '/submit/',
