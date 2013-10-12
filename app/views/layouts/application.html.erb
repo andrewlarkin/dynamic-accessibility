@@ -27,7 +27,7 @@
                     <a href="/resources" class="da-button da-button-list">Accessibility Resources</a>    
                 </li>
                 <!-- This link should change if they are logged in -->
-                <% if @participant.nil? %>
+                <% if current_participant.nil? %>
                     <li class="da-nav-list-item">
                         <a href="/register" class="da-button da-button-list">Register to Participate</a>    
                     </li>
