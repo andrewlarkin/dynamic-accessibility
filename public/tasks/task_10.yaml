@@ -15,7 +15,7 @@ activities:
 
     - type: post
       instructions: Like the post where someone found some money.
-      target: 3
+      target: 2
       messages:
         - name: Susan Blanchett
           avatar: squirrel

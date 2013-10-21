@@ -2,14 +2,14 @@
     <button class="da-shopping-control-left icon-chevron-sign-left" data-x-role="control:left 1 item"></button>
     <div>
         <ul data-x-role="content">
-            <% @activity['items'].each do |item| %>
+            <% @activity['items'].each_with_index do |item, index| %>
                 <li class="da-shopping-item">
                     <%= image_tag "products/#{item['src']}.jpg", :class => "da-shopping-img" %>
                     <h3 class="da-shopping-title"><%= item['title'] %></h3>
                     <div class="da-shopping-info">
                         <span class="da-shopping-desc"><%= item['info'] %></span>
                         <span class="da-shopping-price"><%= item['price'] %></span>
-                        <button class="da-shopping-add" data-index="#{index}">Add to Cart</button>
+                        <button class="da-shopping-add" data-x-role="addbutton" <% if index === @activity['target'] %> data-is-target="true" <% end %>>Add to Cart</button>
                     </div>        
                 </li>
             <% end %>
