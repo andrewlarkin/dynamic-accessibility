@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130925032729) do
+ActiveRecord::Schema.define(version: 20131025021322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,27 +26,13 @@ ActiveRecord::Schema.define(version: 20130925032729) do
     t.integer  "error_rate"
     t.integer  "activity_id"
     t.integer  "subjective_rating"
-  end
-
-  create_table "error_rates", force: true do |t|
-    t.integer  "completed_task_id"
-    t.integer  "error_id"
-    t.integer  "error_count"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "errors", force: true do |t|
-    t.string   "selector"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "type"
   end
 
   create_table "participants", force: true do |t|
     t.string   "email"
     t.string   "device"
     t.string   "crypted_password"
-    t.integer  "prof_level"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "age"
@@ -59,10 +45,10 @@ ActiveRecord::Schema.define(version: 20130925032729) do
     t.string   "group"
   end
 
-  create_table "sessions", force: true do |t|
+  create_table "scores", force: true do |t|
     t.integer "participant_id"
-    t.date    "expires"
-    t.string  "token"
+    t.string  "type"
+    t.integer "score"
   end
 
   create_table "tasks", force: true do |t|
@@ -71,6 +57,7 @@ ActiveRecord::Schema.define(version: 20130925032729) do
     t.string   "name"
     t.boolean  "is_active"
     t.integer  "count"
+    t.integer  "prereq_id"
   end
 
 end

@@ -7,5 +7,5 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 4.times do |i|
-  Task.create(name: "Task ##{i}", is_active: true, count: 15, complete: 0)
+  Task.create(name: "Task ##{i}", is_active: true, count: 15)
 end

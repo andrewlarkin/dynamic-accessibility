@@ -8,15 +8,18 @@ class TasksController < ApplicationController
     else
       @task = Task.find(params[:id])
 
-      #TODO: get user's skill level
-      @level = 4
+      if !@task.prereq_id.nil? && @task.prereq.completed_tasks.length != @task.prereq.count
+        redirect_to current_participant
+      end
 
-      # complete = @task.completed_tasks.where( { :participant_id => current_participant.id } ).length
-      @current_activity = 3
+      @current_activity = @task.completed_tasks.by_participant(current_participant.id).length
+      # @current_activity = 3
 
       @task_info = YAML.load_file('public/tasks/task_' + @task.id.to_s + '.yaml')
 
       @activity = @task_info['activities'][@current_activity]
+
+      @level = current_participant.level(@activity['type'])
     end
   end
 
