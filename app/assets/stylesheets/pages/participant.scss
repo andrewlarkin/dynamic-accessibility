@@ -1,0 +1,23 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.da-participant-table {
+    vertical-align: middle;
+
+    tr {
+        border-bottom: $light_border;
+    }
+
+    td {
+        padding: base(2) base(1);
+        text-align: center;
+    }
+}
+
+.da-participant-header {
+    padding: base(1);
+    background-color: $almost-white;
+    color: $almost-black;
+    border: $dark_border;
+}
