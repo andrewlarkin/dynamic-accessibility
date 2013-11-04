@@ -1,0 +1,27 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+.da-consent {
+    background-color: $white;
+    padding: base(2);
+    color: $black;
+    max-width: 1000px;
+    min-width: 550px;
+}
+
+.da-consent-header {
+    text-align: center;
+}
+
+.da-consent-letterhead {
+    width: 500px;
+}
+
+.da-consent-form {
+    margin: base(2) 0;
+}
+
+.da-consent-form-legend {
+    margin-bottom: base(2);
+}

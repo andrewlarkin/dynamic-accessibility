@@ -2,28 +2,57 @@
     <h1 class="da-h1">Trial data for: <%= @participant.email %></h1>
 
     <% if @participant.is_selected %>
-        <table>
-            <tr>
-                <th>Trial</th>
-                <th>Percentage Complete</th>
-                <th></th>
-            </tr>
-            <% @tasks.each do |task| %>
+        <% if !@participant.consent %>
+            <div class="da-participant"
+            <h2 class="da-h2">Consent</h2>
 
-                <% if task.is_active %>
-                    <tr>
-                        <td><%= task.name %></td>
-                        <td><%= task.completed_tasks.by_participant(@participant.id).length/task.count %></td>
-                        <td>
-                            <% if task.prereq_id.nil? || task.prereq.completed_tasks.length == task.prereq.count %>
-                                <a href="/tasks/<%= task.id %>" class="da-button">Start Task</a>
-                            <% end %>
-                        </td>
-                    </tr>
+            <h3 class="da-h3">Introduction</h3>
+            The purpose of this form is to provide you (as a prospective research study participant) with information that may affect your decision as to whether to participate in this research and to record the consent of those who agree to be involved in the study.
+            Research
+            Andrew Larkin, Master’s Candidate, Software Engineering, Department of Computing Sciences, Villanova University, Principal Investigator, has invited your participation in a research study.
+            Study Purpose
+            The purpose of this study is to determine the effectiveness in dynamically altering a website user interface based on the perceived ability of the user.
+            Description of the Research Study
+            If you decide to participate, then you will join a study being undertaken as a part of graduate research at Villanova University. You will be asked to perform four (4) tasks on a website over a two week period. You will only be asked to complete one task at a time and you will have 48 hours to complete each task. Each task should take no more than 10 minutes to complete. You may use your own device to access the internet and complete the tasks. However, you are asked to use the same device to complete each of the seven tasks and you will be asked to disclose what type of device you used to complete the tasks. Once the task is complete you will be asked to write a brief evaluation of your ability to complete the task. Tasks can be completed at your convenience, so long as they are completed within 48 hours of being issued. These tasks can be completed anywhere.
+            In saying YES, you will be issued a login and password for the site and asked to participate in the two week study. This login will be used to keep a record of your progress through the study.
+            Risks
+            While every measure will be taken to ensure confidentiality, there is a remote chance that results transmitted over the internet may be intercepted by a malicious third party.
+            Benefits
+            You will receive no direct benefit by participating in the study.  The results will, however, provide valuable data that will be used to improve the usability and accessibility of online interfaces for all users.
+            Confidentiality
+            All information obtained in this study is strictly confidential. The results of this research study may be used in reports, presentations, and publications, but the researchers will not identify you. Information about all participants will be retained in a secure database and will be associated with the login generated for each participant. To facilitate communication with each participant, each login will be associated with the participant’s email address for the duration of the study only. Once the study is complete email addresses will be purged. The anonymous data will be retained to assist in the development of future assistive technologies.
+            Withdrawal Privilege
+            Participation in this study is completely voluntary. If you are a Villanova student participation in this experiment will have no influence on your academic performance. It is all right for you to say NO. Even if you say YES now, you are free to say NO later and to withdraw from the study at any time without affecting your course grade or standing in the program. If you wish to withdraw from the study you may do so at any time by sending an email to alarkin2@villanova.edu from the email address with which you registered for the study.
+            Voluntary Consent
+            Any questions you have concerning the research study or your participation in the study, before or after your consent, will be answered by Andrew Larkin, alarkin2@villanova.edu, 856-217-2863. If you have questions about your rights as a subject/participant in this research, or if you feel you have been placed at risk, you can contact the Institutional Review Board at Villanova University through its chairperson, Dr. Suzanne Smeltzer, suzanne.smeltzer@villanova.edu, 610-519-6828.
+            This form explains the nature, demands, benefits and any risk of the project. By signing this form you agree knowingly to assume any risks involved. Remember, your participation is voluntary. You may choose not to participate or to withdraw your consent and discontinue participation at any time without penalty or loss of benefit. In signing this consent form, you are not waiving any legal claims, rights, or remedies. A copy of this consent form will be given (offered) to you.
+            Selecting "yes" indicates your consent to participate in the above study. 
+
+            [  ]  Yes, I consent to participate in this study.
+        <% else %>
+            <table>
+                <tr>
+                    <th>Trial</th>
+                    <th>Percentage Complete</th>
+                    <th></th>
+                </tr>
+                <% @tasks.each do |task| %>
+
+                    <% if task.is_active %>
+                        <tr>
+                            <td><%= task.name %></td>
+                            <td><%= task.completed_tasks.by_participant(@participant.id).length/task.count %></td>
+                            <td>
+                                <% if task.prereq_id.nil? || task.prereq.completed_tasks.length == task.prereq.count %>
+                                    <a href="/tasks/<%= task.id %>" class="da-button">Start Task</a>
+                                <% end %>
+                            </td>
+                        </tr>
+                    <% end %>
+
                 <% end %>
-
-            <% end %>
-        </table>
+            </table>
+        <% end %>
     <% else %>
         <p>Participants will be notified by email once they have been selected for the trial.  Thank you.</p>
     <% end %>

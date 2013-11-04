@@ -33,6 +33,9 @@
                     </li>
                 <% else %>
                     <li class="da-nav-list-item"> 
+                        <a href="/participants/<%= current_participant.id %>/" class="da-button da-button-list">Your Details</a>    
+                    </li>
+                    <li class="da-nav-list-item"> 
                         <a href="/logout" class="da-button da-button-list">Log Out</a>    
                     </li>
                 <% end %>

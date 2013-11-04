@@ -6,9 +6,10 @@ DynamicAccessibility::Application.routes.draw do
 
   root 'main#index'
 
-  resources :participants
+  resources :participants do 
+    put :toggle_consent, :on => :member
+  end
   resources :participant_sessions
-  resources :consent
   resources :tasks
 
   post 'submit' => 'tasks#update'
