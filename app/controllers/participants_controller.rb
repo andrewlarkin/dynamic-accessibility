@@ -14,7 +14,7 @@ class ParticipantsController < ApplicationController
 
       if @participant != current_participant
         redirect_to current_participant
-      elsif !@participant.consent
+      elsif @participant.selected && !@participant.consent
         redirect_to edit_participant_path(@participant.id)
       end
 
