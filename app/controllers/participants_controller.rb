@@ -14,13 +14,13 @@ class ParticipantsController < ApplicationController
 
       if @participant != current_participant
         redirect_to current_participant
-      elsif @participant.selected && !@participant.consent
+      elsif @participant.is_selected && !@participant.consent
         redirect_to edit_participant_path(@participant.id)
       end
 
       @tasks = Task.all
     rescue
-      redirect_to current_participant
+      redirect_to '/'
     end
 
   end
