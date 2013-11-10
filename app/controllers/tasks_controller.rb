@@ -19,7 +19,7 @@ class TasksController < ApplicationController
 
       @activity = @task_info['activities'][@current_activity]
 
-      @level = current_participant.level(@activity['type'])
+      @level = current_participant.group == "A" ? 0 : current_participant.level(@activity['type'])
     end
   end
 
