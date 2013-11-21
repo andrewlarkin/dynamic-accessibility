@@ -343,22 +343,26 @@ activities:
       messages:
         - name: Leia Organa
           avatar: chinchilla
-          time: 8:04
+          time: |
+            8:04
           message: My boyfriend is taking me out to dinner!  He's so romantic!
 
         - name: Padme Amidala
           avatar: donkey
-          time: 8:12
+          time: |
+            8:12
           message: Mr. Romance better have you home by 11.
 
         - name: D. Vader
           avatar: chinchilla
-          time: 8:20
+          time: |
+            8:20
           message: He had better not try anything.  He doesn't know the power of a protective father.
 
         - name: Han Solo
           avatar: walrus
-          time: 8:25
+          time: |
+            8:25
           message: Uh... I forgot!  I have a thing tonight...
     #9
     - type: form
@@ -442,7 +446,8 @@ activities:
       messages:
         - name: John Smith
           avatar: chinchilla
-          time: 8:04
+          time: |
+            8:04
           message: Hey Sarah!  What are you doing tonight?
 
         - name: Sarah James
@@ -453,29 +458,34 @@ activities:
 
         - name: John Smith
           avatar: chinchilla
-          time: 8:41
+          time: |
+            8:41
           message: How would you like to go to a concert with me?
 
         - name: Sarah James
           avatar: donkey
-          time: 8:30
+          time: |
+            8:30
           message: |
             I could be up for that.  What band?
 
         - name: John Smith
           avatar: chinchilla
-          time: 8:36
+          time: |
+            8:36
           message: |
             It's my cousin's band.  They're pretty good.  I've heard them practicing, I think they're starting to rock
 
         - name: John Smith
           avatar: chinchilla
-          time: 9:13
+          time: |
+            9:13
           message: Sarah? You there?
 
         - name: Sarah James
           avatar: donkey
-          time: 9:20
+          time: |
+            9:20
           message: |
             Ooh, I just remembered, I promised my sister I'd help her with her homework.  Maybe next time!
     #12
