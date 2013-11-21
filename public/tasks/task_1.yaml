@@ -1,7 +1,9 @@
 id: 1
 activities:
+    #1
     - type: form
-      instructions: Fill out the form for
+      instructions: |
+        Enter the information into the form:
       fields:
         first_name: John
         last_name: Smith
@@ -12,64 +14,48 @@ activities:
         zip: 17601
         phone: 555-344-5682
         email: john_smith4@email.com
-
+    #2
     - type: post
       instructions: Like the post where someone found some money.
       target: 2
       messages:
         - name: Susan Blanchett
           avatar: squirrel
-          time: 5:21
+          time: |
+            5:21
           message: I just got a new puppy!  Very excited!
 
         - name: Jeremy Jones
           avatar: donkey
-          time: 5:15
+          time: |
+            5:15
           message: Going to Las Vegas.  Hope I don't loose all my money lol.
 
         - name: John Smith
           avatar: chinchilla
-          time: 4:45
+          time: |
+            4:45
           message: Just found $20 in my pocket while doing the laundry!
 
         - name: Harris Finch
           avatar: walrus
-          time: 3:31
+          time: |
+            3:31
           message: Not looking forward to having to drive six hours.  Ugh.
-
+    #3
     - type: shopping
-      instructions: Add a 3D movie to the shopping cart.
-      target: 1
+      instructions: Add a the movie that costs $19.99 to the shopping cart.
+      target: 10
       items:
-        - src: movies/2_guns
-          title: 2 Guns
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/avatar
-          title: Avatar
-          info:  3D Blu-ray
-          price: $24.99
-
-        - src: movies/brave
-          title: Brave
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/despicable_me_2
-          title: Despicable Me 2
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/gi_joe
-          title: |
-            G.I. Joe: Retaliation
-          info: Blu-ray
-          price: $24.99
 
         - src: movies/harry_potter
           title: | 
             Harry Potter: The Complete 8 Film Collection
+          info: Blu-ray
+          price: $54.99
+
+        - src: movies/brave
+          title: Brave
           info: Blu-ray
           price: $24.99
 
@@ -78,13 +64,29 @@ activities:
           info: Blu-ray
           price: $24.99
 
-        - src: movies/iron_man_3
-          title: Iron Man 3
+        - src: movies/despicable_me_2
+          title: Despicable Me 2
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/gi_joe
+          title: |
+            G.I. Joe: Retaliation
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/avatar
+          title: Avatar
+          info:  3D Blu-ray
+          price: $24.99
+
+        - src: movies/monsters_university
+          title: Monsters University
           info: Blu-ray
           price: $24.99
 
-        - src: movies/les_miserables
-          title: Les Miserables
+        - src: movies/iron_man_3
+          title: Iron Man 3
           info: Blu-ray
           price: $24.99
 
@@ -93,10 +95,46 @@ activities:
           info: Blu-ray
           price: $24.99
 
-        - src: movies/monsters_university
-          title: Monsters University
+        - src: movies/the_little_mermaid
+          title: The Little Mermaid
           info: Blu-ray
           price: $24.99
+
+        - src: movies/les_miserables
+          title: Les Miserables
+          info: Blu-ray
+          price: $19.99
+
+        - src: movies/this_is_the_end
+          title: This Is The End
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/the_hunger_games
+          title: The Hunger Games
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/world_war_z
+          title: World War Z
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_avengers
+          title: The Avengers
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/the_dark_knight_rises
+          title: The Dark Knight Rises
+          info: Blu-ray
+          price: $14.99
 
         - src: movies/pacific_rim
           title: Pacific Rim
@@ -106,31 +144,10 @@ activities:
         - src: movies/silver_linings_playbook
           title: Silver Linings Playbook
           info: Blu-ray
-          price: $24.99
+          price: $14.99
 
         - src: movies/skyfall
           title: Skyfall
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/star_trek_into_darkness
-          title: | 
-            Star Trek: Into Darkness
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/the_avengers
-          title: The Avengers
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/the_croods
-          title: The Croods
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/the_dark_knight_rises
-          title: The Dark Knight Rises
           info: Blu-ray
           price: $24.99
 
@@ -138,41 +155,21 @@ activities:
           title: |
             The Hobbit: An Unexpected Journey
           info: Blu-ray
-          price: $24.99
-
-        - src: movies/the_hunger_games
-          title: The Hunger Games
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/the_little_mermaid
-          title: The Little Mermaid
-          info: Blu-ray
-          price: $24.99
+          price: $29.99
 
         - src: movies/the_wizard_of_oz
           title: The Wizard of Oz
           info: Blu-ray
-          price: $24.99
+          price: $14.99
 
         - src: movies/the_wolverine
           title: The Wolverine
           info: Blu-ray
           price: $24.99
-
-        - src: movies/this_is_the_end
-          title: This Is The End
-          info: Blu-ray
-          price: $24.99
-
-        - src: movies/world_war_z
-          title: World War Z
-          info: Blu-ray
-          price: $24.99
-
+    #4
     - type: download
-      instructions: Click the image of the lastest iPhone to download it.
-      target: iphone_5s
+      instructions: Find an image of Batman.
+      target: the_dark_knight_rises
       categories:
         - name: Mobile
           path: products/mobile
@@ -196,3 +193,435 @@ activities:
             - avatar
             - brave
             - despicable_me_2
+        - name: Shoes
+          path: products/shoes
+          images:
+            - vans_red
+            - brixee_bootie
+            - nine_west_pump
+            - ASICS_running_shoe
+            - madden_sneaker
+            - rockport_wispen_mocc_toe
+            - nine_west_boot
+            - crocs
+    #5
+    - type: shopping
+      instructions: Find a pair of shoes that is on SALE.
+      target: 8
+      items:
+        - src: mobile/galaxy_s3
+          title: Samsung Galaxy S3
+          info: Verizon
+          price: $99.00
+
+        - src: shoes/puma_osu_running_shoe
+          title: Puma Osu Running Shoes
+          info: Size 14 Mens
+          price: $79.99
+
+        - src: shoes/crocs
+          title: Crocs Classic Cog
+          info: Unisex
+          price: $39.99
+
+        - src: toys/lego_coast_guard_patrol
+          title: Lego Coast Guard Patrol
+          info: Defend your Lego City!
+          price: $89.99
+
+        - src: shoes/nike_womens_revolution_running_shoe
+          title: Nike Revolution Women's Running Shoes
+          info: Size 5 Womens
+          price: $59.99
+
+        - src: mobile/htc_inspire
+          title: HTC Inspire
+          info: SALE T-Mobile
+          price: $99.99
+
+        - src: movies/world_war_z
+          title: World War Z
+          info: Blu-ray
+          price: $24.99
+
+        - src: toys/mr_potato_head
+          title: Mr. Potato Head
+          info: The Original
+          price: $8.99
+
+        - src: shoes/sketchers_fusion_shoe
+          title: Sketchers Fusion Shoes
+          info: SALE All Sizes
+          price: $39.99
+
+        - src: shoes/rockport_wispen_mocc_toe
+          title: Rockport Wispen Mocc Toe Shoe
+          info: Available in multiple colors
+          price: $129.99
+
+        - src: toys/lincoln_logs
+          title: Lincoln Logs
+          info: A classic toy for all
+          price: $9.99
+
+        - src: toys/ninja_turtle_raphael
+          title: Teenage Mutant Ninja Turtles Raphael
+          info: Heroes In A Half-Shell
+          price: $8.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/the_avengers
+          title: The Avengers
+          info: SALE Blu-ray
+          price: $19.99
+
+        - src: toys/simon
+          title: Simon
+          info: Memory Game
+          price: $11.99
+
+
+    #6
+    - type: form
+      instructions: |
+        Add the items to the shopping list in the order they appear:
+      fields:
+        item_one: Oranges
+        item_two: Banannas
+        item_three: Toothpaste
+        item_four: Ham
+        item_five: Sugar
+        item_six: Tissues
+    #7
+    - type: download
+      instructions: Find the toy turtle.
+      target: ninja_turtle_raphael
+      categories:
+        - name: Toys
+          path: products/toys
+          images:
+            - lego_minecraft
+            - lincoln_logs
+            - magic_8_ball
+            - mr_potato_head
+            - nerf_strongarm_blaster
+            - ninja_turtle_raphael
+            - play-doh
+            - settlers_of_catan
+        - name: Mobile
+          path: products/mobile
+          images: 
+            - droid_x
+            - galaxy_s3
+            - iphone_5c
+            - kindle_fire
+            - nexus_4
+            - htc_titan
+            - iphone_5s
+            - ipad_mini
+        - name: Shoes
+          path: products/shoes
+          images:
+            - vans_red
+            - brixee_bootie
+            - nine_west_pump
+            - ASICS_running_shoe
+            - madden_sneaker
+            - rockport_wispen_mocc_toe
+            - nine_west_boot
+            - crocs
+
+    #8
+    - type: post
+      instructions: Like the post that contains a threat.
+      target: 2
+      messages:
+        - name: Leia Organa
+          avatar: chinchilla
+          time: 8:04
+          message: My boyfriend is taking me out to dinner!  He's so romantic!
+
+        - name: Padme Amidala
+          avatar: donkey
+          time: 8:12
+          message: Mr. Romance better have you home by 11.
+
+        - name: D. Vader
+          avatar: chinchilla
+          time: 8:20
+          message: He had better not try anything.  He doesn't know the power of a protective father.
+
+        - name: Han Solo
+          avatar: walrus
+          time: 8:25
+          message: Uh... I forgot!  I have a thing tonight...
+    #9
+    - type: form
+      instructions: |
+        Enter the information into the form:
+      fields:
+        first_name: Jane
+        last_name: Doe
+        street_1: P.O. Box 1668
+        city: Seattle
+        state: WA
+        zip: 98101
+        phone: 555-344-5322
+        email: jdoe@email.com
+
+    #10
+    - type: shopping
+      instructions: |
+        Find a mobile device that indicates it is available for AT&T.
+      target: 5
+      items:
+        - src: mobile/droid_x
+          title: Motorola Droid X
+          info: Verizon
+          price: $99.99
+
+        - src: mobile/galaxy_s3
+          title: Samsung Galaxy S3
+          info: |
+            T-Mobile, Sprint
+          price: $99.99
+
+        - src: mobile/htc_inspire
+          title: HTC Inspire
+          info: |
+            Verizon, Sprint
+          price: $199.99
+
+        - src: mobile/htc_titan
+          title: HTC Titan
+          info: Verizon
+          price: $149.99
+
+        - src: mobile/ipad_mini
+          title: Apple iPad Mini
+          info: Sprint
+          price: $299.99
+
+        - src: mobile/iphone_5s
+          title: Apple iPhone 5S
+          info: |
+            T-Mobile, AT&T
+          price: $199.99
+
+        - src: mobile/kindle_fire
+          title: Kindle Fire
+          info: Verizon
+          price: $299.99
+
+        - src: mobile/lumia_521
+          title: Nokia Lumia 521
+          info: |
+            Sprint, Verizon
+          price: $199.99
+
+        - src: mobile/nexus_7
+          title: Google Nexus 7
+          info: Sprint
+          price: $299.99
+
+        - src: mobile/iphone_4
+          title: Apple iPhone 4
+          info: |
+            T-Mobile, Verizon
+          price: $59.99
+
+    #11
+    - type: post
+      instructions: Like the post that was made at 9:13.
+      target: 5
+      messages:
+        - name: John Smith
+          avatar: chinchilla
+          time: 8:04
+          message: Hey Sarah!  What are you doing tonight?
+
+        - name: Sarah James
+          avatar: donkey
+          time: 8:30
+          message: |
+            Not much, planning on watching a movie at home. Why?
+
+        - name: John Smith
+          avatar: chinchilla
+          time: 8:41
+          message: How would you like to go to a concert with me?
+
+        - name: Sarah James
+          avatar: donkey
+          time: 8:30
+          message: |
+            I could be up for that.  What band?
+
+        - name: John Smith
+          avatar: chinchilla
+          time: 8:36
+          message: |
+            It's my cousin's band.  They're pretty good.  I've heard them practicing, I think they're starting to rock
+
+        - name: John Smith
+          avatar: chinchilla
+          time: 9:13
+          message: Sarah? You there?
+
+        - name: Sarah James
+          avatar: donkey
+          time: 9:20
+          message: |
+            Ooh, I just remembered, I promised my sister I'd help her with her homework.  Maybe next time!
+    #12
+    - type: form
+      instructions: |
+        Enter the steps in the form:
+      fields:
+        step_one: |
+          Add flour, sugar, and baking soda
+        step_two: Mix in eggs and milk
+        step_three: Heat griddle to 375
+        step_four: Pour batter on griddle in four-inch circles
+        step_five: Cook until golden brown on one side then flip
+
+    #13
+    - type: download
+      instructions: Find an iPad
+      target: ninja_turtle_raphael
+      categories:
+        - name: Toys
+          path: products/toys
+          images:
+            - lego_minecraft
+            - lincoln_logs
+            - mr_potato_head
+            - nerf_strongarm_blaster
+            - play-doh
+            - magic_8_ball
+            - monster_high_catty_noir
+            - nerf_rebelle_heartbreaker
+        - name: Mobile
+          path: products/mobile
+          images: 
+            - droid_x
+            - galaxy_s3
+            - iphone_5c
+            - ipad_mini
+            - nexus_4
+            - htc_titan
+            - iphone_5s
+            - iphone_4
+        - name: Movies
+          path: products/movies
+          images:
+            - 2_guns
+            - brave
+            - despicable_me_2
+            - inception
+            - iron_man_3
+            - skyfall
+            - star_trek_into_darkness
+            - the_avengers
+
+    #14
+    - type: shopping
+      instructions: Find a movie that is in 3D.
+      target: 4
+      items:
+        - src: movies/harry_potter
+          title: | 
+            Harry Potter: The Complete 8 Film Collection
+          info: Blu-ray
+          price: $54.99
+
+        - src: movies/man_of_steel
+          title: Man of Steel
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/inception
+          title: Inception
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/silver_linings_playbook
+          title: Silver Linings Playbook
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/avatar
+          title: Avatar
+          info:  3D Blu-ray
+          price: $24.99
+
+        - src: movies/iron_man_3
+          title: Iron Man 3
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_croods
+          title: The Croods
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/gi_joe
+          title: |
+            G.I. Joe: Retaliation
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/les_miserables
+          title: Les Miserables
+          info: Blu-ray
+          price: $19.99
+
+        - src: movies/the_avengers
+          title: The Avengers
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/monsters_university
+          title: Monsters University
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/skyfall
+          title: Skyfall
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/pacific_rim
+          title: Pacific Rim
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/the_hunger_games
+          title: The Hunger Games
+          info: Blu-ray
+          price: $24.99
+
+    #15
+    - type: form
+      instructions: |
+        Enter the information into the form:
+      fields:
+        prefix: Ms.
+        first_name: Jennifer 
+        last_name: Smith
+        street: 14 Main St.
+        city: Boston
+        state: MA
+        zip: 02112
+        phone: 555-577-1109

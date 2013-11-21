@@ -24,7 +24,7 @@ define('tasks/post', ['jquery', 'tasks/task'], function($, Task){
         liked = this.likebuttons().filter('.flagged').not(target);
 
     if (target.is('.flagged')) {
-      this._correctness = 100 - (liked.length / this.likebuttons().length);
+      this._correctness = (1 - (liked.length / this.likebuttons().length)) * 100;
     }
   };
 

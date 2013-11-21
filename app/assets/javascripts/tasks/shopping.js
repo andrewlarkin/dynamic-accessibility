@@ -5,13 +5,13 @@ define('tasks/shopping', ['jquery', 'tasks/task'], function($, Task){
   Shopping.defineRole('addbutton');
 
   Shopping.prototype.addToCart = function(button) {
-    if (!button.data('isTarget')) {
-      this._errorCount += 1;
-    }
-
     button.toggleClass('added');
 
     if (button.is('.added')) {
+      if (!button.data('isTarget')) {
+        this._errorCount += 1;
+      }
+      
       button.text('Remove from Cart');
     } else {
       button.text('Add to Cart');
@@ -23,7 +23,7 @@ define('tasks/shopping', ['jquery', 'tasks/task'], function($, Task){
         liked = this.addbuttons().filter('.added').not(target);
 
     if (target.is('.added')) {
-      this._correctness = 100 - (liked.length / this.addbuttons().length);
+      this._correctness = (1 - (liked.length / this.addbuttons().length)) * 100;
     }
   };
 

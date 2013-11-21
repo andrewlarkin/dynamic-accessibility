@@ -3,9 +3,14 @@ define('tasks/form', ['jquery', 'tasks/task', 'xooie/helpers'], function($, Task
   var Form = Task.extend(function() {});
 
   function checkInput (input) {
-    var value = input.val();
+    var value = input.val().toString().toLowerCase(),
+        target = input.data('targetValue');
 
-    if (value !== "" && input.data('targetValue').toLowerCase() !== value.toLowerCase()) {
+    if (typeof target !== 'undefined') {
+      target = target.toString().toLowerCase();
+    }
+
+    if (value !== "" && target !== value) {
       return 1;
     } else {
       return 0;
@@ -27,7 +32,7 @@ define('tasks/form', ['jquery', 'tasks/task', 'xooie/helpers'], function($, Task
       incorrect += checkInput($(this));
     });
 
-    this._correctness = incorrect / this.forminputs().length;
+    this._correctness = (1 - incorrect / this.forminputs().length) * 100;
   };
 
   Form.prototype._process_role_forminput = function(forminputs) {

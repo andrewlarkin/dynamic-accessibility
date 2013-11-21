@@ -15,11 +15,18 @@ class TasksController < ApplicationController
       @current_activity = @task.completed_tasks.by_participant(current_participant.id).length
       # @current_activity = 3
 
-      @task_info = YAML.load_file('public/tasks/task_' + @task.id.to_s + '.yaml')
+      puts @task.count
+      puts @current_activity
 
-      @activity = @task_info['activities'][@current_activity]
+      if @current_activity == @task.count
+        redirect_to current_participant
+      else
+        @task_info = YAML.load_file('public/tasks/task_' + @task.id.to_s + '.yaml')
 
-      @level = current_participant.group == "A" ? 0 : current_participant.level(@activity['type'])
+        @activity = @task_info['activities'][@current_activity]
+
+        @level = current_participant.group == "A" ? 0 : current_participant.level(@activity['type'])
+      end
     end
   end
 
@@ -40,7 +47,7 @@ class TasksController < ApplicationController
 
       respond_to do |format|
         if completed_task.save
-          format.html { redirect_to completed_task.task, :notice =>'Task completed' }
+          format.html { redirect_to Task.find(params[:task_id]), :notice =>'Task completed' }
         else
           format.html{ render '/tasks/' + params[:task_id] }
         end

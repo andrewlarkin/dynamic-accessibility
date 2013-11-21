@@ -17,7 +17,7 @@ define('tasks/download', ['jquery', 'tasks/task'], function($, Task){
         downloaded = this.downloadbuttons().filter('.downloaded').not(target);
 
     if (target.is('.downloaded')) {
-      this._correctness = 100 - (downloaded.length / this.downloadbuttons().length);
+      this._correctness = (1 - (downloaded.length / this.downloadbuttons().length)) * 100;
     }
   };
 
