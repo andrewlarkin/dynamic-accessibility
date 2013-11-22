@@ -18,7 +18,7 @@
                         <td>
                             <% if task.completed_tasks.length == task.count %>
                                 Task Complete
-                            <% elsif task.prereq_id.nil? || task.prereq.completed_tasks.by_participant(@ participant.id).length == task.prereq.count %>
+                            <% elsif task.prereq_id.nil? || task.prereq.completed_tasks.by_participant(@participant.id).length == task.prereq.count %>
                                 <a href="/tasks/<%= task.id %>" class="da-button">Start Task</a>
                             <% end %>
                         </td>
