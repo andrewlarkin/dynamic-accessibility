@@ -124,7 +124,15 @@ class Participant < ActiveRecord::Base
     avg = (error_quart + correctness_quart + time_quart) / 3
     current_score = self.scores.by_type(type).first()
 
-    if avg < 3 && current_score.score < 4
+    if current_score.nil?
+      current_score = Scores.new({
+        :participant_id => self.id,
+        :type => type,
+        :score => avg < 3 ? 1 : 0
+      })
+
+      current_score.save
+    elsif avg < 3 && current_score.score < 4
       Scores.update(current_score.id, :score => current_score.score + 1)
     end
   end
