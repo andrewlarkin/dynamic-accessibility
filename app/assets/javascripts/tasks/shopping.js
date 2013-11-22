@@ -2,6 +2,8 @@ define('tasks/shopping', ['jquery', 'tasks/task'], function($, Task){
 
   var Shopping = Task.extend(function() {});
 
+  Shopping.define('type', 'shopping');
+
   Shopping.defineRole('addbutton');
 
   Shopping.prototype.addToCart = function(button) {

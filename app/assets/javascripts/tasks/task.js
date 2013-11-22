@@ -53,7 +53,8 @@ define('tasks/task', ['jquery', 'xooie/widgets/base', 'xooie/event_handler'], fu
         activity_id: this.activityId(),
         time: time,
         error_rate: this._errorCount,
-        success_rate: this._correctness
+        success_rate: this._correctness,
+        type: this.type()
       },
       success: function(data, status, xhr) {
         alert('Activity Complete!  Click "OK" to continue to the next activity.');

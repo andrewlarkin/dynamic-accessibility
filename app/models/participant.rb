@@ -138,8 +138,6 @@ class Participant < ActiveRecord::Base
   end
 
   def level(type)
-    puts(self.scores)
-
     score = self.scores.by_type(type).first()
 
     return score.nil? ? 0 : score.score

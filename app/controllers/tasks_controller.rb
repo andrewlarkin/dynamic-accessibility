@@ -34,19 +34,19 @@ class TasksController < ApplicationController
    
     if !current_participant.nil?
 
-       # call method to process results and update user's data
-
       completed_task = CompletedTask.new({ 
         :participant_id => current_participant.id,
         :task_id => params[:task_id],
         :activity_id => params[:activity_id],
         :error_rate => params[:error_rate],
         :success_rate => params[:success_rate],
-        :time => params[:time]
+        :time => params[:time],
+        :type => params[:type]
       }) 
 
       respond_to do |format|
         if completed_task.save
+          current_participant.set_level(params[:type])
           format.html { redirect_to Task.find(params[:task_id]), :notice =>'Task completed' }
         else
           format.html{ render '/tasks/' + params[:task_id] }

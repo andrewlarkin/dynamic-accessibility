@@ -2,6 +2,8 @@ define('tasks/post', ['jquery', 'tasks/task'], function($, Task){
 
   var Post = Task.extend(function() {});
 
+  Post.define('type', 'post');
+
   Post.defineRole('likebutton');
 
   Post.prototype.flagButton = function(button) {
