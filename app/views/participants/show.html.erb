@@ -14,11 +14,11 @@
                 <% if task.is_active %>
                     <tr>
                         <td><%= task.name %></td>
-                        <td><%= (task.completed_tasks.length * 100 / task.count) %>%</td>
+                        <td><%= (task.completed_tasks.by_participant(@participant.id).length * 100 / task.count) %>%</td>
                         <td>
                             <% if task.completed_tasks.length == task.count %>
                                 Task Complete
-                            <% elsif task.prereq_id.nil? || task.prereq.completed_tasks.length == task.prereq.count %>
+                            <% elsif task.prereq_id.nil? || task.prereq.completed_tasks.by_participant(@ participant.id).length == task.prereq.count %>
                                 <a href="/tasks/<%= task.id %>" class="da-button">Start Task</a>
                             <% end %>
                         </td>
