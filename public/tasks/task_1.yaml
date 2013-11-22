@@ -285,7 +285,6 @@ activities:
           info: Memory Game
           price: $11.99
 
-
     #6
     - type: form
       instructions: |
@@ -503,7 +502,7 @@ activities:
     #13
     - type: download
       instructions: Find an iPad
-      target: ninja_turtle_raphael
+      target: ipad_mini
       categories:
         - name: Toys
           path: products/toys
