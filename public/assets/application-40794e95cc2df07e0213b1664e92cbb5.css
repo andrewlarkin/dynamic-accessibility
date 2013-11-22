@@ -1,0 +1,1268 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+
+
+
+
+
+
+ */
+
+/*! normalize.css v2.1.2 | MIT License | git.io/normalize */
+
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-family: sans-serif; /* 1 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+
+b,
+strong {
+    font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+
+pre {
+    white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+
+q {
+    quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+
+img {
+    border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+
+figure {
+    margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit; /* 1 */
+    font-size: 100%; /* 2 */
+    margin: 0; /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+body {
+  font-family: Helvetica Neue, Arial, sans-serif;
+  background-color: #1b1b1c;
+  color: #e3e3eb;
+  font-size: 14px; }
+
+a {
+  color: #0591ab; }
+  a:hover, a:focus {
+    color: #07c9d4; }
+
+[class^=da-h] {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+[class^=da-dark-h] {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  color: #1b1b1c; }
+
+[class*=h1] {
+  font-size: 36px;
+  font-family: 'JosefinSansThin'; }
+
+[class*=h2] {
+  font-size: 24px; }
+
+[class*=h3] {
+  font-size: 14px;
+  padding-bottom: 10px; }
+
+[class^=da-h3] {
+  border-bottom: 1px solid #e3e3eb; }
+
+[class^=da-dark-h3] {
+  border-bottom: 1px solid #1b1b1c; }
+
+.da-content {
+  padding: 0 30px 25px; }
+.da-download-tablist {
+  display: inline-block;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0; }
+  .da-download-tablist > li {
+    display: inline-block;
+    font-size: 14px; }
+
+.da-download-tab {
+  display: inline-block; }
+
+.da-download-tabpanel {
+  display: none; }
+  .da-download-tabpanel.is-tab-active {
+    display: block; }
+
+.level-0 .da-download-tab {
+  padding: 2px; }
+.level-0 .da-download-img {
+  width: 75px; }
+.level-0 .da-download-tab {
+  font-size: 10px; }
+
+.level-1 .da-download-tab {
+  padding: 3px; }
+.level-1 .da-download-img {
+  width: 125px; }
+.level-1 .da-download-tab {
+  font-size: 12px; }
+
+.level-2 .da-download-tab {
+  padding: 4px; }
+.level-2 .da-download-img {
+  width: 175px; }
+.level-2 .da-download-tab {
+  font-size: 14px; }
+
+.level-3 .da-download-tab {
+  padding: 5px; }
+.level-3 .da-download-img {
+  width: 225px; }
+.level-3 .da-download-tab {
+  font-size: 16px; }
+
+.level-4 .da-download-tab {
+  padding: 6px; }
+.level-4 .da-download-img {
+  width: 275px; }
+.level-4 .da-download-tab {
+  font-size: 18px; }
+
+.level-0 .icon-circle-arrow-down:before,
+.level-1 .icon-circle-arrow-down:before,
+.level-2 .icon-circle-arrow-down:before {
+  display: none; }
+
+.level-3 .da-download-tab,
+.level-4 .da-download-tab {
+  border: 1px solid #434345;
+  position: relative; }
+  .level-3 .da-download-tab.is-tab-active,
+  .level-4 .da-download-tab.is-tab-active {
+    background-color: #0591ab;
+    color: white; }
+    .level-3 .da-download-tab.is-tab-active:hover, .level-3 .da-download-tab.is-tab-active:focus,
+    .level-4 .da-download-tab.is-tab-active:hover,
+    .level-4 .da-download-tab.is-tab-active:focus {
+      background-color: #07c9d4; }
+.level-3 .da-download-button,
+.level-4 .da-download-button {
+  border: 1px solid #c6c6cc;
+  margin: 3px; }
+.level-3 .icon-circle-arrow-down:before,
+.level-4 .icon-circle-arrow-down:before {
+  display: inline-block;
+  padding-right: 4px; }
+.level-3 .da-download-tabpanel,
+.level-4 .da-download-tabpanel {
+  border: 1px solid #434345;
+  padding: 4px; }
+.level-4 .da-task-label {
+  display: inline-block;
+  width: 150px; }
+
+.level-3 .da-task-instructions-form-value {
+  display: block; }
+.level-3 .da-task-form-row {
+  display: block;
+  padding: 6px; }
+
+.level-4 .da-task-instructions-form-value {
+  display: block; }
+.level-4 .da-task-form-row {
+  display: block;
+  padding: 8px; }
+.da-post {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.da-post-heading {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+.da-post-avatar {
+  width: 75px;
+  height: 75px;
+  float: left; }
+
+.level-1 .da-post-body {
+  margin-left: 77px; }
+.level-1 .da-post-like {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0; }
+  .level-1 .da-post-like:hover, .level-1 .da-post-like:focus {
+    color: #07c9d4; }
+  .level-1 .da-post-like:focus {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+    -moz-box-shadow: 0px 0px 5px #4dd6bb;
+    box-shadow: 0px 0px 5px #4dd6bb; }
+
+.level-2 .da-post-body {
+  margin-left: 79px; }
+.level-2 .da-post-like {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0; }
+  .level-2 .da-post-like:hover, .level-2 .da-post-like:focus {
+    color: #07c9d4; }
+  .level-2 .da-post-like:focus {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+    -moz-box-shadow: 0px 0px 5px #4dd6bb;
+    box-shadow: 0px 0px 5px #4dd6bb; }
+
+.level-3 .da-post-body {
+  margin-left: 81px; }
+.level-3 .da-post-like {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0; }
+  .level-3 .da-post-like:hover, .level-3 .da-post-like:focus {
+    color: #07c9d4; }
+  .level-3 .da-post-like:focus {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+    -moz-box-shadow: 0px 0px 5px #4dd6bb;
+    box-shadow: 0px 0px 5px #4dd6bb; }
+
+.level-4 .da-post-body {
+  margin-left: 83px; }
+.level-4 .da-post-like {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0; }
+  .level-4 .da-post-like:hover, .level-4 .da-post-like:focus {
+    color: #07c9d4; }
+  .level-4 .da-post-like:focus {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+    -moz-box-shadow: 0px 0px 5px #4dd6bb;
+    box-shadow: 0px 0px 5px #4dd6bb; }
+
+.level-0 .da-post-avatar {
+  display: none; }
+
+.level-3 .da-post-item,
+.level-4 .da-post-item {
+  clear: both;
+  border-bottom: 1px solid #c6c6cc; }
+/* line 5, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.da-shopping {
+  position: relative;
+  padding: 0 50px;
+}
+
+/* line 10, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.xooie-carousel-content > .da-shopping-item {
+  font-size: 14px;
+  width: 220px;
+  padding-bottom: 15px;
+}
+
+/* line 16, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.xooie-carousel-content:first-child {
+  margin-left: 0;
+}
+
+/* line 20, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+[class^="da-shopping-control"] {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0;
+  color: #434345;
+  position: absolute;
+  font-size: 24px;
+  width: 50px;
+  height: 100px;
+  top: 10px;
+}
+/* line 22, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/_mixins.scss */
+[class^="da-shopping-control"]:hover, [class^="da-shopping-control"]:focus {
+  color: #07c9d4;
+}
+/* line 26, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/_mixins.scss */
+[class^="da-shopping-control"]:focus {
+  outline: 0;
+  -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+  -moz-box-shadow: 0px 0px 5px #4dd6bb;
+  box-shadow: 0px 0px 5px #4dd6bb;
+}
+/* line 29, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+[class^="da-shopping-control"][disabled] {
+  color: #c6c6cc;
+}
+
+/* line 34, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.da-shopping-control-left {
+  left: 0;
+}
+
+/* line 38, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.da-shopping-control-right {
+  right: 0;
+}
+
+/* line 42, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.da-shopping-title {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* line 50, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.da-shopping-add {
+  display: block;
+}
+
+/* line 58, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-0 .da-shopping-item,
+.level-0 .da-shopping-img {
+  width: 75px;
+}
+/* line 62, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-0 .da-shopping-title {
+  max-width: 75px;
+}
+/* line 66, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-0 .da-shopping-item {
+  margin-left: 0px;
+}
+
+/* line 58, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-1 .da-shopping-item,
+.level-1 .da-shopping-img {
+  width: 125px;
+}
+/* line 62, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-1 .da-shopping-title {
+  max-width: 125px;
+}
+/* line 66, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-1 .da-shopping-item {
+  margin-left: 2.5px;
+}
+
+/* line 58, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-2 .da-shopping-item,
+.level-2 .da-shopping-img {
+  width: 175px;
+}
+/* line 62, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-2 .da-shopping-title {
+  max-width: 175px;
+}
+/* line 66, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-2 .da-shopping-item {
+  margin-left: 5px;
+}
+
+/* line 58, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-3 .da-shopping-item,
+.level-3 .da-shopping-img {
+  width: 225px;
+}
+/* line 62, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-3 .da-shopping-title {
+  max-width: 225px;
+}
+/* line 66, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-3 .da-shopping-item {
+  margin-left: 7.5px;
+}
+
+/* line 58, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-item,
+.level-4 .da-shopping-img {
+  width: 275px;
+}
+/* line 62, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-title {
+  max-width: 275px;
+}
+/* line 66, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-item {
+  margin-left: 10px;
+}
+
+/* line 73, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-title {
+  font-size: 24px;
+}
+/* line 77, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-price {
+  display: block;
+  font-weight: bold;
+}
+
+/* line 85, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.da-shopping-title,
+.da-shopping-info {
+  font-size: 8.5px;
+}
+
+/* line 85, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.da-shopping-title,
+.da-shopping-info {
+  font-size: 9.66667px;
+}
+
+/* line 85, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.da-shopping-title,
+.da-shopping-info {
+  font-size: 12px;
+}
+
+/* line 92, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-3 .da-shopping-img {
+  border: 1px solid #434345;
+  box-sizing: border-box;
+}
+/* line 97, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-3 .da-shopping-title {
+  font-weight: bold;
+  margin: 5px 0 3px 0;
+}
+/* line 102, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-3 .da-shopping-info {
+  padding: 0 10px;
+}
+/* line 106, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-3 .da-shopping-add {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0;
+  border: 1px solid #434345;
+  border-radius: 6px;
+  padding: 6px;
+  color: #1b1b1c;
+  margin-top: 1.5px;
+  font-weight: bold;
+}
+/* line 22, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/_mixins.scss */
+.level-3 .da-shopping-add:hover, .level-3 .da-shopping-add:focus {
+  color: #07c9d4;
+}
+/* line 26, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/_mixins.scss */
+.level-3 .da-shopping-add:focus {
+  outline: 0;
+  -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+  -moz-box-shadow: 0px 0px 5px #4dd6bb;
+  box-shadow: 0px 0px 5px #4dd6bb;
+}
+/* line 116, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-3 .da-shopping-add:hover, .level-3 .da-shopping-add:focus {
+  border-color: #4dd6bb;
+}
+
+/* line 92, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-img {
+  border: 1px solid #434345;
+  box-sizing: border-box;
+}
+/* line 97, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-title {
+  font-weight: bold;
+  margin: 5px 0 3px 0;
+}
+/* line 102, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-info {
+  padding: 0 10px;
+}
+/* line 106, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-add {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0;
+  border: 1px solid #434345;
+  border-radius: 8px;
+  padding: 8px;
+  color: #1b1b1c;
+  margin-top: 2px;
+  font-weight: bold;
+}
+/* line 22, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/_mixins.scss */
+.level-4 .da-shopping-add:hover, .level-4 .da-shopping-add:focus {
+  color: #07c9d4;
+}
+/* line 26, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/_mixins.scss */
+.level-4 .da-shopping-add:focus {
+  outline: 0;
+  -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+  -moz-box-shadow: 0px 0px 5px #4dd6bb;
+  box-shadow: 0px 0px 5px #4dd6bb;
+}
+/* line 116, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/tasks/shopping.scss */
+.level-4 .da-shopping-add:hover, .level-4 .da-shopping-add:focus {
+  border-color: #4dd6bb;
+}
+/* line 5, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/consent.scss */
+.da-consent {
+  background-color: white;
+  padding: 10px;
+  color: black;
+  max-width: 1000px;
+  min-width: 550px;
+}
+
+/* line 13, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/consent.scss */
+.da-consent-header {
+  text-align: center;
+}
+
+/* line 17, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/consent.scss */
+.da-consent-letterhead {
+  width: 500px;
+}
+
+/* line 21, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/consent.scss */
+.da-consent-form {
+  margin: 10px 0;
+}
+
+/* line 25, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/consent.scss */
+.da-consent-form-legend {
+  margin-bottom: 10px;
+}
+/* line 5, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/participant.scss */
+.da-participant-table {
+  vertical-align: middle;
+}
+/* line 8, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/participant.scss */
+.da-participant-table tr {
+  border-bottom: 1px solid #c6c6cc;
+}
+/* line 12, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/participant.scss */
+.da-participant-table td {
+  padding: 10px 5px;
+  text-align: center;
+}
+
+/* line 18, /Users/alarkin2/Documents/workspace/dynamic-accessibility/app/assets/stylesheets/pages/participant.scss */
+.da-participant-header {
+  padding: 5px;
+  background-color: #e3e3eb;
+  color: #1b1b1c;
+  border: 1px solid #434345;
+}
+.da-register {
+  color: #1b1b1c;
+  background-color: #e3e3eb;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  padding: 15px; }
+  .da-register fieldset {
+    margin-bottom: 15px; }
+
+.da-list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.da-list-item {
+  border-top: 1px solid #434345;
+  padding: 10px 5px; }
+  .da-list-item:last-child {
+    border-bottom: 1px solid #434345; }
+
+.da-register-entry {
+  margin-bottom: 10px; }
+.da-task {
+  position: relative;
+  width: 800px;
+  border: 1px solid #434345;
+  margin-bottom: 10px; }
+
+.da-task-instructions {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  top: 0;
+  width: 200px;
+  padding: 10px;
+  border-right: 1px solid #434345;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.da-task-container {
+  min-height: 550px;
+  margin-left: 200px;
+  padding: 10px; }
+
+.da-task-button {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0; }
+  .da-task-button:hover, .da-task-button:focus {
+    color: #07c9d4; }
+  .da-task-button:focus {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+    -moz-box-shadow: 0px 0px 5px #4dd6bb;
+    box-shadow: 0px 0px 5px #4dd6bb; }
+
+.level-0 {
+  color: #b6b6cb;
+  font-size: 10px; }
+  .level-0.da-task {
+    background-color: #eeeef0; }
+  .level-0 .da-task-button {
+    color: #b6b6cb;
+    padding: 0px; }
+  .level-0 .da-task-label {
+    margin-right: 0px; }
+  .level-0 .da-task-input {
+    line-height: 12px;
+    color: #b6b6cb; }
+
+.level-1 {
+  color: #9999b6;
+  font-size: 12px; }
+  .level-1.da-task {
+    background-color: white; }
+  .level-1 .da-task-button {
+    color: #9999b6;
+    padding: 2px; }
+  .level-1 .da-task-label {
+    margin-right: 2px; }
+  .level-1 .da-task-input {
+    line-height: 13px;
+    color: #9999b6; }
+
+.level-2 {
+  color: #7b7ba1;
+  font-size: 14px; }
+  .level-2.da-task {
+    background-color: white; }
+  .level-2 .da-task-button {
+    color: #7b7ba1;
+    padding: 4px; }
+  .level-2 .da-task-label {
+    margin-right: 4px; }
+  .level-2 .da-task-input {
+    line-height: 14px;
+    color: #7b7ba1; }
+
+.level-3 {
+  color: #616188;
+  font-size: 16px; }
+  .level-3.da-task {
+    background-color: white; }
+  .level-3 .da-task-button {
+    color: #616188;
+    padding: 6px; }
+  .level-3 .da-task-label {
+    margin-right: 6px; }
+  .level-3 .da-task-input {
+    line-height: 15px;
+    color: #616188; }
+
+.level-4 {
+  color: #4c4c6a;
+  font-size: 18px; }
+  .level-4.da-task {
+    background-color: white; }
+  .level-4 .da-task-button {
+    color: #4c4c6a;
+    padding: 8px; }
+  .level-4 .da-task-label {
+    margin-right: 8px; }
+  .level-4 .da-task-input {
+    line-height: 16px;
+    color: #4c4c6a; }
+button,
+input[type="submit"] {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent; }
+
+.da-button {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0;
+  padding: 10px 5px;
+  border-top: 1px solid #c6c6cc;
+  border-bottom: 1px solid #c6c6cc; }
+  .da-button:hover, .da-button:focus {
+    color: #07c9d4; }
+  .da-button:focus {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+    -moz-box-shadow: 0px 0px 5px #4dd6bb;
+    box-shadow: 0px 0px 5px #4dd6bb; }
+
+.da-button-dark {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0;
+  padding: 10px 5px;
+  color: #434345;
+  border-top: 1px solid #434345;
+  border-bottom: 1px solid #434345; }
+  .da-button-dark:hover, .da-button-dark:focus {
+    color: #07c9d4; }
+  .da-button-dark:focus {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+    -moz-box-shadow: 0px 0px 5px #4dd6bb;
+    box-shadow: 0px 0px 5px #4dd6bb; }
+
+.da-button-list {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: color 0.2s ease-in;
+  -webkit-transition-delay: 0;
+  -moz-transition: color 0.2s ease-in 0;
+  -o-transition: color 0.2s ease-in 0;
+  transition: color 0.2s ease-in 0;
+  display: block;
+  padding: 10px 15px; }
+  .da-button-list:hover, .da-button-list:focus {
+    color: #07c9d4; }
+  .da-button-list:focus {
+    outline: 0;
+    -webkit-box-shadow: 0px 0px 5px #4dd6bb;
+    -moz-box-shadow: 0px 0px 5px #4dd6bb;
+    box-shadow: 0px 0px 5px #4dd6bb; }
+@font-face {
+  font-family: "JosefinSansThin";
+  src: url("/fonts/JosefinSans-Thin.eot"), url("/fonts/JosefinSans-Thin.ttf") format("truetype") url("/fonts/JosefinSans-Thin.woff") format("woff") url("/fonts/JosefinSans-Thin.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "JosefinSansLight";
+  src: url("/fonts/JosefinSans-Light.eot"), url("/fonts/JosefinSans-Light.ttf") format("truetype") url("/fonts/JosefinSans-Light.woff") format("woff") url("/fonts/JosefinSans-Light.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "JosefinSansMedium";
+  src: url("/fonts/JosefinSans-Regular.eot"), url("/fonts/JosefinSans-Regular.ttf") format("truetype") url("/fonts/JosefinSans-Regular.woff") format("woff") url("/fonts/JosefinSans-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "JosefinSansBold";
+  src: url("/fonts/JosefinSans-SemiBold.eot"), url("/fonts/JosefinSans-SemiBold.ttf") format("truetype") url("/fonts/JosefinSans-SemiBold.woff") format("woff") url("/fonts/JosefinSans-SemiBold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("/fonts/fontawesome-webfont.eot"), url("/fonts/fontawesome-webfont.ttf") format("truetype"), url("/fonts/fontawesome-webfont.woff") format("woff"), url("/fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0; }
+
+.da-input {
+  border: 0;
+  background-color: #c6c6cc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px -1px 1px black;
+  -moz-box-shadow: -1px -1px 1px black;
+  box-shadow: -1px -1px 1px black; }
+
+.da-form-label {
+  margin-right: 10px; }
+
+.da-form-fieldset {
+  margin-top: 10px;
+  padding: 10px 0; }
+
+.da-form-errors {
+  background-color: #c6c6cc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  color: #434345;
+  padding: 10px;
+  margin-bottom: 10px; }
+.da-header {
+  padding: 20px 30px 15px;
+  border-bottom: 1px solid #c6c6cc; }
+  .da-header .da-h1 {
+    font-size: 46px; }
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased; }
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  text-decoration: inherit;
+  display: inline-block;
+  speak: none; }
+
+.icon-chevron-sign-left:before {
+  content: "\f137"; }
+
+.icon-chevron-sign-right:before {
+  content: "\f138"; }
+
+.icon-circle-arrow-right:before {
+  content: "\f0a9"; }
+
+.icon-circle-arrow-down:before {
+  content: "\f0ab"; }
+.da-nav {
+  border-bottom: 1px solid #c6c6cc;
+  padding: 0 30px;
+  margin-bottom: 15px; }
+
+.da-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0; }
+  .da-nav-list li {
+    font-size: 14px; }
+
+.da-nav-list-item {
+  display: inline-block;
+  border-left: 1px solid #c6c6cc; }
+  .da-nav-list-item:last-child {
+    border-right: 1px solid #c6c6cc; }
