@@ -2,7 +2,7 @@ define('tasks/download', ['jquery', 'tasks/task'], function($, Task){
 
   var Download = Task.extend(function() {});
 
-  Donwload.define('type', 'download');
+  Download.define('type', 'download');
 
   Download.defineRole('downloadbutton');
 

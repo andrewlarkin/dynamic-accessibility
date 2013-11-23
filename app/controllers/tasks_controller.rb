@@ -41,12 +41,14 @@ class TasksController < ApplicationController
         :error_rate => params[:error_rate],
         :success_rate => params[:success_rate],
         :time => params[:time],
-        :type => params[:type]
+        :activity_type => params[:type]
       }) 
 
       respond_to do |format|
         if completed_task.save
-          current_participant.set_level(params[:type])
+          if (params[:task_id].to_i > 1)
+            current_participant.set_level(params[:type])
+          end
           format.html { redirect_to Task.find(params[:task_id]), :notice =>'Task completed' }
         else
           format.html{ render '/tasks/' + params[:task_id] }

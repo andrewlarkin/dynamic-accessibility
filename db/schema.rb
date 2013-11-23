@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025021322) do
+ActiveRecord::Schema.define(version: 20131123162336) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20131025021322) do
     t.integer  "error_rate"
     t.integer  "activity_id"
     t.integer  "subjective_rating"
-    t.string   "type"
+    t.string   "activity_type"
   end
 
   create_table "participants", force: true do |t|
@@ -47,8 +47,8 @@ ActiveRecord::Schema.define(version: 20131025021322) do
 
   create_table "scores", force: true do |t|
     t.integer "participant_id"
-    t.string  "type"
     t.integer "score"
+    t.string  "activity_type"
   end
 
   create_table "tasks", force: true do |t|

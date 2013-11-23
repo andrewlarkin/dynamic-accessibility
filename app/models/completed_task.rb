@@ -7,6 +7,6 @@ class CompletedTask < ActiveRecord::Base
   validates :subjective_rating, :numericality => { :less_than_or_equal_to => 5, :greater_than_or_equal_to => 1 }, :allow_nil => true
 
   scope :by_participant, ->(participant_id) { where(participant_id: participant_id) }
-  scope :by_type, ->(type) { where(type: type) }
+  scope :by_type, -> (type) { where(activity_type: type) }
 
 end

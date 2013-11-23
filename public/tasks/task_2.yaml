@@ -1,0 +1,40 @@
+id: 2
+activities:
+    #1
+    - type: shopping
+
+    #2
+    - type: post
+
+    #3
+    - type: form
+
+    #4
+    - type: download
+
+    #5
+    - type: form
+
+    #6
+    - type: post
+
+    #7
+    - type: shopping
+
+    #8
+    - type: form
+
+    #9
+    - type: 
+
+    #10
+
+    #11
+
+    #12
+
+    #13
+
+    #14
+
+    #15
