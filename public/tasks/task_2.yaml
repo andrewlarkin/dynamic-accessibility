@@ -2,39 +2,607 @@ id: 2
 activities:
     #1
     - type: shopping
+      instructions: Add the movie that is available as a DVD.
+      target: 6
+      items:
+        - src: movies/the_dark_knight_rises
+          title: The Dark Knight Rises
+          info: Blu-ray
+          price: $14.99
 
+        - src: movies/monsters_university
+          title: Monsters University
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_avengers
+          title: The Avengers
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_hobbit
+          title: |
+            The Hobbit: An Unexpected Journey
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/despicable_me_2
+          title: Despicable Me 2
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/iron_man_3
+          title: Iron Man 3
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/brave
+          title: Brave
+          info: DVD
+          price: $14.99
+
+        - src: movies/pacific_rim
+          title: Pacific Rim
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/the_hunger_games
+          title: The Hunger Games
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/world_war_z
+          title: World War Z
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_wolverine
+          title: The Wolverine
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_avengers
+          title: The Avengers
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/skyfall
+          title: Skyfall
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/les_miserables
+          title: Les Miserables
+          info: Blu-ray
+          price: $19.99
     #2
     - type: post
+      instructions: Like the post where someone expresses a desire.
+      target: 2
+      messages:
+        - name: Joan Smith
+          avatar: squirrel
+          time: |
+            4:30
+          message: I love this picture of you!  You both look so cute!
+
+        - name: John Smith
+          avatar: donkey
+          time: |
+            5:15
+          message: What a great picture.  You guys look great!
+
+        - name: Susan Smith
+          avatar: chinchilla
+          time: |
+            6:00
+          message: I wish I could be there with you guys!  Good luck!
+
+        - name: Jenny Jones
+          avatar: walrus
+          time: |
+            7:31
+          message: This looks like an amazing day!
 
     #3
     - type: form
+      instructions: |
+        Enter the information into the form exactly as it appears:
+      fields:
+        name: John Jones
+        occupation: Salesman
+        salary: |
+            $59,000
+        location: |
+            Erie, PA
+        hobby: fishing
 
     #4
     - type: download
+      instructions: Find the gun.
+      target: nerf_strongarm_blaster
+      categories:
+        - name: Toys
+          path: products/toys
+          images:
+            - lego_minecraft
+            - lincoln_logs
+            - magic_8_ball
+            - mr_potato_head
+            - nerf_strongarm_blaster
+            - ninja_turtle_raphael
+            - play-doh
+            - settlers_of_catan
+        - name: Mobile
+          path: products/mobile
+          images: 
+            - droid_x
+            - galaxy_s3
+            - iphone_5c
+            - kindle_fire
+            - nexus_4
+            - htc_titan
+            - iphone_5s
+            - ipad_mini
+        - name: Shoes
+          path: products/shoes
+          images:
+            - vans_red
+            - brixee_bootie
+            - nine_west_pump
+            - ASICS_running_shoe
+            - madden_sneaker
+            - rockport_wispen_mocc_toe
+            - nine_west_boot
+            - crocs
 
     #5
     - type: form
-
+      instructions: |
+        Enter the list into the form exactly as it appears:
+      fields:
+        item_one: Cherries
+        item_two: popsicles
+        item_three: Hrse radish
+        item_four: oranges
+        item_five: bread
     #6
     - type: post
+      instructions: Like the post made at 6:15
+      target: 4
+      messages:
+        - name: Clark Kent
+          avatar: walrus
+          time: |
+            5:56
+          message: |
+            Just totally saw Batman get his cape stuck in a revolving door. #superherofail
+
+        - name: Hal Jordan
+          avatar: squirrel
+          time: |
+            6:01
+          message: |
+            OMG, that's hillarious.  Was he all like, "I will defeat the injustice of this door!"?
+
+        - name: Barry Allen
+          avatar: donkey
+          time: |
+            6:05
+          message: |
+            See, this is why capes suck.  Amirite, Hal?
+
+        - name: Clark Kent
+          avatar: walrus
+          time: |
+            6:10
+          message: |
+            Lol, hey, I wear a cape and I don't have this problem...
+
+        - name: Bruce Wayne
+          avatar: chinchilla
+          time: |
+            6:15
+          message: |
+            Oh, man, lol, sucks to be Batman.  Who is totally not me.
+
+        - name: Clark Kent
+          avatar: walrus
+          time: |
+            6:21
+          message: |
+            Uh, seriously Bruce?  We totally know you're Batman.
+
+        - name: Bruce Wayne
+          avatar: chinchilla
+          time: |
+            6:24
+          message: |
+            Am not.  I'm not Batman.  Batman fights injustice.  I'm just a billionare playboy who doesn't get capes stuck in doors.
+
+        - name: Barry Allen
+          avatar: donkey
+          time: |
+            6:30
+          message: |
+            You mean he fights the injustice of bad costume design.
+
+        - name: Bruce Wayne
+          avatar: chinchilla
+          time: |
+           6:35
+          message: You're bad costume design.  Jerk.
 
     #7
     - type: shopping
+      instructions: Add the holiday item to the shopping cart.
+      target: 8
+      items:
+        - src: mobile/galaxy_s3
+          title: Samsung Galaxy S3
+          info: New Low Price!
+          price: $99.99
+
+        - src: shoes/puma_osu_running_shoe
+          title: Puma Osu Running Shoes
+          info: On Sale
+          price: $49.99
+
+        - src: movies/the_wizard_of_oz
+          title: The Wizard of Oz
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/the_wolverine
+          title: The Wolverine
+          info: Blu-ray
+          price: $24.99
+
+        - src: toys/lincoln_logs
+          title: Lincoln Logs
+          info: The Classic Toy
+          price: $8.99
+
+        - src: toys/play-doh
+          title: Play-Doh Set
+          info: 12 Colors
+          price: $8.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: mobile/lumia_521
+          title: Nokia Lumia 521
+          info: Free with 2 year contract
+          price: FREE
+
+        - src: toys/barbie_collector_holiday
+          title: Barbie Collector 2013 Holiday
+          info: New for the Holidays
+          price: $12.99
+
+        - src: mobile/htc_titan
+          title: HTC Titan
+          info: Available on Verizon and Sprint
+          price: $199.99
+
+        - src: shoes/rocket_dog_flats
+          title: Rocket Dog Flats
+          info: All Sizes Available
+          price: $29.99
+
+        - src: shoes/nike_womens_revolution_running_shoe
+          title: Nike Revolution Women's Running Shoes
+          info: Premiere Running Shoes
+          price: $99.99
+
+        - src: movies/harry_potter
+          title: | 
+            Harry Potter: The Complete 8 Film Collection
+          info: Blu-ray
+          price: $54.99
+
+        - src: toys/magic_8_ball
+          title: Magic 8 Ball
+          info: Will you buy this?  All signs point to yes.
+          price: $5.99
+
+        - src: shoes/womens_canvas_shoes
+          title: Women's Canvas Shoes
+          info: Avaialable in all sizes
+          price: $24.99
 
     #8
     - type: form
-
+      instructions: |
+        Enter the information into the the form exactly as it appears:
+      fields:
+        first_name: Lawrence
+        last_name: Johnson
+        street_address: 143 South St.
+        city: Philadelphia
+        state: PA
+        zip: 19103
+        email: lawrence.johnson@gmail.com
     #9
-    - type: 
+    - type: post
+      instructions: Like the post where someone is impatient.
+      target: 3
+      messages:
+        - name: Jenny
+          avatar: walrus
+          time: |
+            8:00
+          message: That was the best episode ever!  I can't wait for next week!
+
+        - name: John
+          avatar: chinchilla
+          time: |
+            8:02
+          message: That was so cool!  I can't believe they brought you-know-who back!
+
+        - name: Warren
+          avatar: squirrel
+          time: |
+            8:07
+          message: Don't say anything!  I haven't watched it yet.
+
+        - name: Jenny
+          avatar: walrus
+          time: |
+            8:11
+          message: Hurry up!  I want to talk about it!
+
+        - name: John
+          avatar: chinchilla
+          time: |
+            8:15
+          message: |
+            In that case, Warren, I shouldn't mention that Jack is back and he can read minds.
+
+        - name: Warren
+          avatar: squirrel
+          time: |
+            8:20
+          message: |
+            You're a jerk, John
 
     #10
+    - type: download
+      instructions: Find something fun and wooden.
+      target: lincoln_logs
+      categories:
+        - name: Toys
+          path: products/toys
+          images:
+            - lego_minecraft
+            - lincoln_logs
+            - mr_potato_head
+            - nerf_strongarm_blaster
+            - play-doh
+            - magic_8_ball
+            - monster_high_catty_noir
+            - nerf_rebelle_heartbreaker
+        - name: Mobile
+          path: products/mobile
+          images: 
+            - droid_x
+            - galaxy_s3
+            - iphone_5c
+            - ipad_mini
+            - nexus_4
+            - htc_titan
+            - iphone_5s
+            - iphone_4
+        - name: Movies
+          path: products/movies
+          images:
+            - 2_guns
+            - brave
+            - despicable_me_2
+            - inception
+            - iron_man_3
+            - skyfall
+            - star_trek_into_darkness
+            - the_avengers
 
     #11
+    - type: post
+      instructions: Like the post where someone talks about their cousin.
+      target: 4
+      messages:
+        - name: John Smith
+          avatar: chinchilla
+          time: |
+            8:04
+          message: Hey Sarah!  What are you doing tonight?
+
+        - name: Sarah James
+          avatar: donkey
+          time: 8:30
+          message: |
+            Not much, planning on watching a movie at home. Why?
+
+        - name: John Smith
+          avatar: chinchilla
+          time: |
+            8:41
+          message: How would you like to go to a concert with me?
+
+        - name: Sarah James
+          avatar: donkey
+          time: |
+            8:30
+          message: |
+            I could be up for that.  What band?
+
+        - name: John Smith
+          avatar: chinchilla
+          time: |
+            8:36
+          message: |
+            It's my cousin's band.  They're pretty good.  I've heard them practicing, I think they're starting to rock
+
+        - name: John Smith
+          avatar: chinchilla
+          time: |
+            9:13
+          message: Sarah? You there?
+
+        - name: Sarah James
+          avatar: donkey
+          time: |
+            9:20
+          message: |
+            Ooh, I just remembered, I promised my sister I'd help her with her homework.  Maybe next time!
 
     #12
+    - type: form
+      instructions: |
+        Enter the information into the form exactly as it appears:
+      fields:
+        name: Sarah Smith
+        street: 78 South Main St
+        apt: A3
+        city: Philadelphia
+        state: PA
+        zip: 19143
 
     #13
+    - type: download
+      instructions: Find some red footware.
+      target: vans_red
+      categories:
+        - name: Mobile
+          path: products/mobile
+          images: 
+            - droid_x
+            - galaxy_s3
+            - iphone_5c
+            - kindle_fire
+            - nexus_4
+            - htc_titan
+            - iphone_5s
+            - ipad_mini
+        - name: Movies
+          path: products/movies
+          images:
+            - harry_potter
+            - les_miserables
+            - pacific_rim
+            - star_trek_into_darkness
+            - the_dark_knight_rises
+            - avatar
+            - brave
+            - despicable_me_2
+        - name: Shoes
+          path: products/shoes
+          images:
+            - vans_red
+            - brixee_bootie
+            - nine_west_pump
+            - ASICS_running_shoe
+            - madden_sneaker
+            - rockport_wispen_mocc_toe
+            - nine_west_boot
+            - crocs
 
     #14
+    - type: shopping
+      instructions: Add a familiar spud to the shopping cart.
+      target: 7
+      items:
+        - src: mobile/galaxy_s3
+          title: Samsung Galaxy S3
+          info: Verizon
+          price: $99.00
+
+        - src: shoes/puma_osu_running_shoe
+          title: Puma Osu Running Shoes
+          info: Size 14 Mens
+          price: $79.99
+
+        - src: shoes/crocs
+          title: Crocs Classic Cog
+          info: Unisex
+          price: $39.99
+
+        - src: toys/lego_coast_guard_patrol
+          title: Lego Coast Guard Patrol
+          info: Defend your Lego City!
+          price: $89.99
+
+        - src: shoes/nike_womens_revolution_running_shoe
+          title: Nike Revolution Women's Running Shoes
+          info: Size 5 Womens
+          price: $59.99
+
+        - src: mobile/htc_inspire
+          title: HTC Inspire
+          info: SALE T-Mobile
+          price: $99.99
+
+        - src: movies/world_war_z
+          title: World War Z
+          info: Blu-ray
+          price: $24.99
+
+        - src: toys/mr_potato_head
+          title: Mr. Potato Head
+          info: The Original
+          price: $8.99
+
+        - src: shoes/sketchers_fusion_shoe
+          title: Sketchers Fusion Shoes
+          info: SALE All Sizes
+          price: $39.99
+
+        - src: shoes/rockport_wispen_mocc_toe
+          title: Rockport Wispen Mocc Toe Shoe
+          info: Available in multiple colors
+          price: $129.99
+
+        - src: toys/lincoln_logs
+          title: Lincoln Logs
+          info: A classic toy for all
+          price: $9.99
+
+        - src: toys/ninja_turtle_raphael
+          title: Teenage Mutant Ninja Turtles Raphael
+          info: Heroes In A Half-Shell
+          price: $8.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/the_avengers
+          title: The Avengers
+          info: SALE Blu-ray
+          price: $19.99
+
+        - src: toys/simon
+          title: Simon
+          info: Memory Game
+          price: $11.99
 
     #15
+    - type: form
+      instructions: |
+        Enter the information into the form exactly as it appears:
+      fields:
+        item: Rare Victorian Necklace
+        id: 54G89TX
+        description: Large blue gem embedded in setting with frilled edge.
+        price: $150

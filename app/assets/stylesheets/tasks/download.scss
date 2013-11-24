@@ -18,6 +18,10 @@
     }
 }
 
+.da-download-img {
+    border: 2px solid transparent;
+}
+
 @for $i from 0 through 4 {
     .level-#{$i} {
         .da-download-tab {
@@ -40,6 +44,14 @@
 .level-2 {
     .icon-circle-arrow-down:before {
         display: none;
+    }
+}
+
+@for $i from 1 through 4 {
+    .level-#{$i} {
+        .da-download-img.downloaded {
+            border: 2px solid $blue;
+        }
     }
 }
 

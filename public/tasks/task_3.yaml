@@ -1,31 +1,679 @@
 id: 3
 activities:
     #1
+    - type: download
+      instructions: Find some boots.
+      target: nine_west_boot
+      categories:
+        - name: Toys
+          path: products/toys
+          images:
+            - lego_minecraft
+            - lincoln_logs
+            - magic_8_ball
+            - mr_potato_head
+            - nerf_strongarm_blaster
+            - ninja_turtle_raphael
+            - play-doh
+            - settlers_of_catan
+        - name: Mobile
+          path: products/mobile
+          images: 
+            - droid_x
+            - galaxy_s3
+            - iphone_5c
+            - kindle_fire
+            - nexus_4
+            - htc_titan
+            - iphone_5s
+            - ipad_mini
+        - name: Shoes
+          path: products/shoes
+          images:
+            - vans_red
+            - nike_dart_running_shoe
+            - nine_west_pump
+            - ASICS_running_shoe
+            - madden_sneaker
+            - rockport_wispen_mocc_toe
+            - nine_west_boot
+            - crocs
 
     #2
+    - type: form
+      instructions: |
+        Enter the information into the form exactly as it appears:
+      fields: 
+        name: Susan Jones
+        occupation: student
+        street_address: 4520 5th Ave.
+        city: Phoenix
+        state: AZ
+        zip: 85003
+        phone: 555-289-1522
 
     #3
+    - type: post
+      instructions: Like a post from soneone named Harris.
+      target: 3
+      messages:
+        - name: Susan Blanchett
+          avatar: squirrel
+          time: |
+            5:21
+          message: I just got a new puppy!  Very excited!
+
+        - name: Jeremy Jones
+          avatar: donkey
+          time: |
+            5:15
+          message: Going to Las Vegas.  Hope I don't loose all my money lol.
+
+        - name: John Smith
+          avatar: chinchilla
+          time: |
+            4:45
+          message: Just found $20 in my pocket while doing the laundry!
+
+        - name: Harris Finch
+          avatar: walrus
+          time: |
+            3:31
+          message: Not looking forward to having to drive six hours.  Ugh.
 
     #4
+    - type: form
+      instructions: |
+        Enter the information into the form exactly as it appears:
+      fields:
+        step_one: Separate the clothing by color.
+        step_two: Add the clothes to the washing machine.
+        step_three: Add an appropriate amount of detergent.
+        step_four: Set the washing machine to low and press start.
+        step_five: | 
+            When the cycle is complete, remove clothing from washing machine and put in dryer.
 
     #5
+    - type: shopping
+      instructions: Add the free item to the shopping cart.
+      target: 7
+      items:
+        - src: mobile/galaxy_s3
+          title: Samsung Galaxy S3
+          info: New Low Price!
+          price: $99.99
+
+        - src: shoes/puma_osu_running_shoe
+          title: Puma Osu Running Shoes
+          info: On Sale
+          price: $49.99
+
+        - src: movies/the_wizard_of_oz
+          title: The Wizard of Oz
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/the_wolverine
+          title: The Wolverine
+          info: Blu-ray
+          price: $24.99
+
+        - src: toys/lincoln_logs
+          title: Lincoln Logs
+          info: The Classic Toy
+          price: $8.99
+
+        - src: toys/play-doh
+          title: Play-Doh Set
+          info: 12 Colors
+          price: $8.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: mobile/lumia_521
+          title: Nokia Lumia 521
+          info: Free with 2 year contract
+          price: FREE
+
+        - src: toys/barbie_collector_holiday
+          title: Barbie Collector 2013 Holiday
+          info: New for the Holidays
+          price: $12.99
+
+        - src: mobile/htc_titan
+          title: HTC Titan
+          info: Available on Verizon and Sprint
+          price: $199.99
+
+        - src: shoes/rocket_dog_flats
+          title: Rocket Dog Flats
+          info: All Sizes Available
+          price: $29.99
+
+        - src: shoes/nike_womens_revolution_running_shoe
+          title: Nike Revolution Women's Running Shoes
+          info: Premiere Running Shoes
+          price: $99.99
+
+        - src: movies/harry_potter
+          title: | 
+            Harry Potter: The Complete 8 Film Collection
+          info: Blu-ray
+          price: $54.99
+
+        - src: toys/magic_8_ball
+          title: Magic 8 Ball
+          info: Will you buy this?  All signs point to yes.
+          price: $5.99
+
+        - src: shoes/womens_canvas_shoes
+          title: Women's Canvas Shoes
+          info: Avaialable in all sizes
+          price: $24.99
 
     #6
+    - type: download
+      instructions: Select the fighting robots.
+      target: rock_em_sock_em
+      categories:
+        - name: Shoes
+          path: products/shoes
+          images:
+            - brixee_bootie
+            - clarks_desert_boot
+            - qupid_high_heel_stiletto
+            - rocket_dog_flats
+            - rockport_wispen_mocc_toe
+            - converse_chuck_taylor
+            - sketchers_womens_slippers
+            - womens_canvas_shoes
+        - name: Toys
+          path: products/toys
+          images:
+            - lego_minecraft
+            - fischer-price_fun_sounds_farm
+\           - magic_8_ball
+            - monster_high_catty_noir
+            - nerf_strongarm_blaster
+            - play-doh
+            - rock_em_sock_em
+            - settlers_of_catan
+        - name: Movies
+          path: products/movies
+          images:
+            - 2_guns
+            - brave
+            - harry_potter
+            - iron_man_3
+            - pacific_rim
+            - the_little_mermaid
+            - the_wolverine
+            - this_is_the_end
 
     #7
+    - type: form
+      instructions: |
+        Enter the information into the form eactly as it appears:
+      fields: 
+        first_doctor: William Hartnell
+        second_doctor: Patrick Troughton
+        third_doctor: Jon Pertwee
+        fourth_doctor: Tom Baker
+        fifth_doctor: Peter Davison
+        sith_doctor: Colin Baker
+        seventh_doctor: Sylvester McCoy
+        eigth_doctor: Paul McGann
+        war_doctor: John Hurt
+        ninth_doctor: Christopher Eccleston
+        tenth_doctor: David Tennant
+        eleventh_doctor: Matt Smith
+        twelfth_doctor: Peter Capaldi
 
     #8
+    - type: post
+      instructions: Like a post where someone accidentally insults another person.
+      target: 3
+      messages:
+        - name: Peach
+          avatar: chinchilla
+          time: |
+            8:56
+          message: | 
+            OMG, this giant dragon guy is totally trying to hit on me. #notinyourdreams
+
+        - name: Daisy
+          avatar: squirrel
+          time: |
+            9:13
+          message: |
+            LOL, you should totally mess with him.  Text Mario and say that the dragon guy is gonna kidnap you.
+
+        - name: Peach
+          avatar: chinchilla
+          time: |
+            9:20
+          message: You are so bad.  Mario would totally come and jump on this guy's head.
+
+        - name: Daisy
+          avatar: squirrel
+          time: |
+            9:25
+          message: |
+            I know!  He toats deserves it, though.  I can't stand those dragon-lizard guys.  They're so scaley and gross.
+
+        - name: Yoshi
+          avatar: walrus
+          time: |
+            9:30
+          message: :(
+
+        - name: Daisy
+          avatar: squirrel
+          time: |
+            9:33
+          message: |
+            Oh!  Not you, Yoshi.  You're a cute dinosaur, totally different.
+
+        - name: Peach
+          avatar: chinchilla
+          time: |
+            9:35
+          message: |
+            Yeah, you're, like, exempt from being a lizard.  Or a dragon.
+
+        - name: Yoshi
+          avatar: walrus
+          time: |
+            9:40
+          message: :)
 
     #9
+    - type: shopping
+      instructions: |
+        Find a mobile device that is free.
+      target: 9
+      items:
+        - src: mobile/droid_x
+          title: Motorola Droid X
+          info: Verizon
+          price: $99.99
+
+        - src: mobile/galaxy_s3
+          title: Samsung Galaxy S3
+          info: |
+            T-Mobile, Sprint
+          price: $99.99
+
+        - src: mobile/htc_inspire
+          title: HTC Inspire
+          info: |
+            Verizon, Sprint
+          price: $199.99
+
+        - src: mobile/htc_titan
+          title: HTC Titan
+          info: Verizon
+          price: $149.99
+
+        - src: mobile/ipad_mini
+          title: Apple iPad Mini
+          info: Sprint
+          price: $299.99
+
+        - src: mobile/iphone_5s
+          title: Apple iPhone 5S
+          info: |
+            T-Mobile, AT&T
+          price: $199.99
+
+        - src: mobile/kindle_fire
+          title: Kindle Fire
+          info: Verizon
+          price: $299.99
+
+        - src: mobile/lumia_521
+          title: Nokia Lumia 521
+          info: |
+            Sprint, Verizon
+          price: $199.99
+
+        - src: mobile/nexus_7
+          title: Google Nexus 7
+          info: Sprint
+          price: $299.99
+
+        - src: mobile/iphone_4
+          title: Apple iPhone 4
+          info: |
+            T-Mobile, Verizon
+          price: FREE (with 2yr contract)
 
     #10
+    - type: form
+      instructions: |
+        Enter the information into the form exactly as it appears:
+      fields:
+        first_name: Sarah
+        last_name: Howe
+        address: 568 West Court St.
+        city: Manchester
+        state: NH
+        zip: | 
+            03101
 
     #11
+    - type: download
+      instructions: Find an iPhone.
+      target: iphone_5s
+      categories:
+        - name: Mobile
+          path: products/mobile
+          images: 
+            - droid_x
+            - galaxy_s3
+            - galaxy_tab
+            - kindle_fire
+            - nexus_4
+            - htc_titan
+            - iphone_5s
+            - ipad_mini
+        - name: Movies
+          path: products/movies
+          images:
+            - harry_potter
+            - les_miserables
+            - pacific_rim
+            - star_trek_into_darkness
+            - the_dark_knight_rises
+            - avatar
+            - brave
+            - despicable_me_2
+        - name: Shoes
+          path: products/shoes
+          images:
+            - vans_red
+            - brixee_bootie
+            - nine_west_pump
+            - ASICS_running_shoe
+            - madden_sneaker
+            - rockport_wispen_mocc_toe
+            - nine_west_boot
+            - crocs
 
     #12
+    - type: post
+      instructions: Like the post that was made at 4:45
+      target: 2
+      messages:
+        - name: Susan Blanchett
+          avatar: squirrel
+          time: |
+            5:21
+          message: I just got a new puppy!  Very excited!
+
+        - name: Jeremy Jones
+          avatar: donkey
+          time: |
+            5:15
+          message: Going to Las Vegas.  Hope I don't loose all my money lol.
+
+        - name: John Smith
+          avatar: chinchilla
+          time: |
+            4:45
+          message: Just found $20 in my pocket while doing the laundry!
+
+        - name: Harris Finch
+          avatar: walrus
+          time: |
+            3:31
+          message: Not looking forward to having to drive six hours.  Ugh.
 
     #13
+    - type: shopping
+      instructions: Add a movie about Superman to the cart.
+      target: 8
+      items:
+
+        - src: movies/harry_potter
+          title: | 
+            Harry Potter: The Complete 8 Film Collection
+          info: Blu-ray
+          price: $54.99
+
+        - src: movies/brave
+          title: Brave
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/inception
+          title: Inception
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/despicable_me_2
+          title: Despicable Me 2
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/gi_joe
+          title: |
+            G.I. Joe: Retaliation
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/avatar
+          title: Avatar
+          info:  3D Blu-ray
+          price: $24.99
+
+        - src: movies/monsters_university
+          title: Monsters University
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/iron_man_3
+          title: Iron Man 3
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/man_of_steel
+          title: Man of Steel
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_little_mermaid
+          title: The Little Mermaid
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/les_miserables
+          title: Les Miserables
+          info: Blu-ray
+          price: $19.99
+
+        - src: movies/this_is_the_end
+          title: This Is The End
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/the_hunger_games
+          title: The Hunger Games
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/world_war_z
+          title: World War Z
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_avengers
+          title: The Avengers
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/the_dark_knight_rises
+          title: The Dark Knight Rises
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/pacific_rim
+          title: Pacific Rim
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/silver_linings_playbook
+          title: Silver Linings Playbook
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/skyfall
+          title: Skyfall
+          info: Blu-ray
+          price: $24.99
+
+        - src: movies/the_hobbit
+          title: |
+            The Hobbit: An Unexpected Journey
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/the_wizard_of_oz
+          title: The Wizard of Oz
+          info: Blu-ray
+          price: $14.99
+
+        - src: movies/the_wolverine
+          title: The Wolverine
+          info: Blu-ray
+          price: $24.99
 
     #14
+    - type: download
+      instructions: Find a story about a girl with red hair.
+      target: brave
+      categories:
+        - name: Toys
+          path: products/toys
+          images:
+            - lego_minecraft
+            - lincoln_logs
+            - mr_potato_head
+            - nerf_strongarm_blaster
+            - play-doh
+            - magic_8_ball
+            - monster_high_catty_noir
+            - nerf_rebelle_heartbreaker
+        - name: Mobile
+          path: products/mobile
+          images: 
+            - droid_x
+            - galaxy_s3
+            - iphone_5c
+            - ipad_mini
+            - nexus_4
+            - htc_titan
+            - iphone_5s
+            - iphone_4
+        - name: Movies
+          path: products/movies
+          images:
+            - 2_guns
+            - brave
+            - despicable_me_2
+            - inception
+            - iron_man_3
+            - skyfall
+            - star_trek_into_darkness
+            - the_avengers
 
     #15
+    - type: shopping
+      instructions: Add a movie about trekking through the stars.
+      target: 12
+      items:
+        - src: mobile/galaxy_s3
+          title: Samsung Galaxy S3
+          info: Verizon
+          price: $99.00
+
+        - src: shoes/puma_osu_running_shoe
+          title: Puma Osu Running Shoes
+          info: Size 14 Mens
+          price: $79.99
+
+        - src: shoes/crocs
+          title: Crocs Classic Cog
+          info: Unisex
+          price: $39.99
+
+        - src: toys/lego_coast_guard_patrol
+          title: Lego Coast Guard Patrol
+          info: Defend your Lego City!
+          price: $89.99
+
+        - src: shoes/nike_womens_revolution_running_shoe
+          title: Nike Revolution Women's Running Shoes
+          info: Size 5 Womens
+          price: $59.99
+
+        - src: mobile/htc_inspire
+          title: HTC Inspire
+          info: SALE T-Mobile
+          price: $99.99
+
+        - src: movies/world_war_z
+          title: World War Z
+          info: Blu-ray
+          price: $24.99
+
+        - src: toys/mr_potato_head
+          title: Mr. Potato Head
+          info: The Original
+          price: $8.99
+
+        - src: shoes/sketchers_fusion_shoe
+          title: Sketchers Fusion Shoes
+          info: SALE All Sizes
+          price: $39.99
+
+        - src: shoes/rockport_wispen_mocc_toe
+          title: Rockport Wispen Mocc Toe Shoe
+          info: Available in multiple colors
+          price: $129.99
+
+        - src: toys/lincoln_logs
+          title: Lincoln Logs
+          info: A classic toy for all
+          price: $9.99
+
+        - src: toys/ninja_turtle_raphael
+          title: Teenage Mutant Ninja Turtles Raphael
+          info: Heroes In A Half-Shell
+          price: $8.99
+
+        - src: movies/star_trek_into_darkness
+          title: | 
+            Star Trek: Into Darkness
+          info: Blu-ray
+          price: $29.99
+
+        - src: movies/the_avengers
+          title: The Avengers
+          info: SALE Blu-ray
+          price: $19.99
+
+        - src: toys/simon
+          title: Simon
+          info: Memory Game
+          price: $11.99
