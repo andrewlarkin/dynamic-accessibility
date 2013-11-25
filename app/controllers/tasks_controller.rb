@@ -8,7 +8,7 @@ class TasksController < ApplicationController
     else
       @task = Task.find(params[:id])
 
-      if !@task.prereq_id.nil? && @task.prereq.completed_tasks.length != @task.prereq.count
+      if !@task.prereq_id.nil? && @task.prereq.completed_tasks.by_participant(current_participant.id).length != @task.prereq.count
         redirect_to current_participant
       end
 

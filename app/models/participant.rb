@@ -57,9 +57,13 @@ class Participant < ActiveRecord::Base
     larger = []
     smaller = []
 
+    puts type, value
+
     Participant.selected.each do | p |
       if (p.id != self.id)
         v = p.completed_tasks.by_type(type).average(metric)
+
+        puts v
 
         if v >= value
           larger.push(v)
@@ -71,17 +75,30 @@ class Participant < ActiveRecord::Base
 
     total = larger.size + smaller.size
 
-    if (total > 0) 
+    puts smaller.size
+    puts larger.size
 
-      percentile = smaller.size / total
+    puts total
 
-      if percentile == 1
+    if total == 0
+      return 4
+    elsif (total > 0) 
+
+      if type == 'success_rate'
+        percentile = larger.size / total
+      else
+        percentile = smaller.size / total
+      end
+
+      puts percentile
+
+      if percentile == 0
         return 4
-      elsif percentile >= 0.75
+      elsif percentile <= 0.25
         return 3
-      elsif percentile >= 0.5
+      elsif percentile <= 0.5
         return 2
-      elsif percentile >= 0.25
+      elsif percentile <= 0.75
         return 1
       else
         return 0
@@ -100,7 +117,7 @@ class Participant < ActiveRecord::Base
       if (p.id != self.id)
         v = p.completed_tasks.by_type(type).average('success_rate')
 
-        if v >= value
+        if v > value
           larger.push(v)
         else
           smaller.push(v)
@@ -110,20 +127,22 @@ class Participant < ActiveRecord::Base
 
     total = larger.size + smaller.size
 
-    if (total > 0) 
+    if total == 0
+      return 4
+    elsif (total > 0) 
 
-      percentile = smaller.size / total
+      percentile = larger.size / total
 
-      if percentile == 1
-        return 0
-      elsif percentile >= 0.75
-        return 1
-      elsif percentile >= 0.5
-        return 2
-      elsif percentile >= 0.25
-        return 3
-      else
+      if percentile == 0
         return 4
+      elsif percentile <= 0.25
+        return 3
+      elsif percentile <= 0.5
+        return 2
+      elsif percentile <= 0.75
+        return 1
+      else
+        return 0
       end
     else 
       return 0
@@ -132,21 +151,25 @@ class Participant < ActiveRecord::Base
 
   def set_level(type)
     error_quart = self.quartile('error_rate', type)
-    correctness_quart = self.correctness_quartile(type)
+    correctness_quart = self.quartile('success_rate', type)
     time_quart = self.quartile('time', type)
+
+    puts error_quart
+    puts correctness_quart
+    puts time_quart
 
     avg = (error_quart + correctness_quart + time_quart) / 3
     current_score = self.scores.by_type(type).first()
-    
+
     if current_score.nil?
       current_score = Score.new({
         :participant_id => self.id,
         :activity_type => type,
-        :score => avg < 3 ? 1 : 0
+        :score => avg < 2 ? 1 : 0
       })
 
       current_score.save
-    elsif avg < 3 && current_score.score < 4
+    elsif avg < 2 && current_score.score < 4
       Score.update(current_score.id, :score => current_score.score + 1)
     end
   end
