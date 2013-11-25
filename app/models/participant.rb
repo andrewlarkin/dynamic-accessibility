@@ -165,11 +165,11 @@ class Participant < ActiveRecord::Base
       current_score = Score.new({
         :participant_id => self.id,
         :activity_type => type,
-        :score => avg < 2 ? 1 : 0
+        :score => avg < 3 ? 1 : 0
       })
 
       current_score.save
-    elsif avg < 2 && current_score.score < 4
+    elsif avg < 3 && current_score.score < 4
       Score.update(current_score.id, :score => current_score.score + 1)
     end
   end
