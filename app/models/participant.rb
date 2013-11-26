@@ -64,11 +64,12 @@ class Participant < ActiveRecord::Base
         v = p.completed_tasks.by_type(type).average(metric)
 
         puts v
-
-        if v >= value
-          larger.push(v)
-        else
-          smaller.push(v)
+        if !v.nil?
+          if v >= value
+            larger.push(v)
+          else
+            smaller.push(v)
+          end
         end
       end
     end
