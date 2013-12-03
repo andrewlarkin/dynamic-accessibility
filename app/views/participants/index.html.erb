@@ -136,9 +136,7 @@
             <% end %>
             <tr>
                 <td class="da-results-cell" colspan="4">Averages</td>
-                <% types.each do |type| %>
-                    <td class="da-results-cell"></td>
-                <% end %>
+                <td class="da-results-cell"></td>
                 <% @tasks.each_with_index do |task, index| %>
                     <% filtered_tasks[task.name].each do |activity| %>
 
