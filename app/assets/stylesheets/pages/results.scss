@@ -10,6 +10,7 @@ $red: #EF3E36;
 
 .da-results {
     table-layout: fixed;
+    margin-bottom: 25px;
 
     tr {
         width: 100%;
@@ -53,4 +54,8 @@ $red: #EF3E36;
 .da-results-cell {
     padding: 10px;
     border: 1px solid $light_grey;
+}
+
+.da-results-lastrow {
+    border-bottom: 6px solid $light_grey;
 }

@@ -72,7 +72,11 @@
     <% end %>
     </table>
 
+    <h2 class="da-h2">Data by type and metric</h2>
+
     <% types.each_with_index do |type, index| %>
+        <% metrics.each do |m|%>
+        <h3 class="da-h3"><%= type %> - <%= m %></h3>
         <table class="da-results">
         <% @participants.each do |group, participant| %>
             <% filtered_tasks = {} %>
@@ -92,27 +96,20 @@
                 <th class="da-results-header" rowspan="3">Email</th>
                 <th class="da-results-header" rowspan="3">Age</th>
                 <th class="da-results-header" rowspan="3">Device</th>
-                <th class="da-results-header" colspan="4">Score</th>
+                <th class="da-results-header">Score</th>
                 <% @tasks.each do |task| %>
-                    <th class="da-results-header" colspan="<%= filtered_tasks[task.name].length*3 %>"><%= task.name %></th>
+                    <th class="da-results-header" colspan="<%= filtered_tasks[task.name].length %>"><%= task.name %></th>
                 <% end %>
             </tr>
             <tr>
                 <th class="da-results-header <%= type %>" rowspan="2"><%= type %></th>
                 <% @tasks.each_with_index do |task, index| %>
                     <% filtered_tasks[task.name].each do |activity| %>
-                        <th class="da-results-header <%= type %>"  colspan="3"><%= activity['index'] + 1 %></th>
+                        <th class="da-results-header <%= type %>"  rowspan="2"><%= activity['index'] + 1 %></th>
                     <% end %>
                 <% end %>
             </tr>
             <tr>
-                <% @tasks.each_with_index do |task, index| %>
-                    <% filtered_tasks[task.name].each do |activity| %>
-                        <th class="da-results-header <%= type %>" >T</th>
-                        <th class="da-results-header <%= type %>" >E</th>
-                        <th class="da-results-header <%= type %>" >C</th>
-                    <% end %>
-                <% end %>
             </tr>
             <% participant.each do |p| %>
                 <% if p.is_selected && p.consent %>
@@ -126,28 +123,25 @@
                         <% @tasks.each_with_index do |task, index| %>
                             <% filtered_tasks[task.name].each do |activity| %>
                                 <% completed_task = p.completed_tasks.where(:activity_id => activity['index'], :task_id => task.id).first %>
-                                <% metrics.each do |m| %>
-                                    <td class="da-results-cell da-results-metrics"><%= completed_task.nil? ? '' : completed_task[m] %></td>
-                                <% end %>
+                                <td class="da-results-cell da-results-metrics"><%= completed_task.nil? ? '' : completed_task[m] %></td>
                             <% end %>
                         <% end %>
                     </tr>
                 <% end %>
             <% end %>
-            <tr>
-                <td class="da-results-cell" colspan="4">Averages</td>
+            <tr class="da-results-lastrow">
+                <td class="da-results-cell" colspan="4">Average <%= m %></td>
                 <td class="da-results-cell"></td>
                 <% @tasks.each_with_index do |task, index| %>
                     <% filtered_tasks[task.name].each do |activity| %>
 
                         <% completed_task = task.completed_tasks.where('activity_id = ? AND participant_id in (?)', activity['index'], participant.ids) %>
-                        <% metrics.each do |m| %>
-                            <td class="da-results-cell"><%= completed_task.nil? ? '' : completed_task.average(m) %></td>
-                        <% end %>
+                        <td class="da-results-cell"><%= completed_task.nil? ? '' : completed_task.average(m) %></td>
                     <% end %>
                 <% end %>
             </tr>    
         <% end %>
         </table>
+        <% end %>
     <% end %>
 <% end %>
