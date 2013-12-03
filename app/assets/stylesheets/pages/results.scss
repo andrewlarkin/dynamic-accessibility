@@ -1,0 +1,43 @@
+@import 'compass';
+@import 'variables';
+@import 'mixins';
+
+$green: #3DBC7C;
+$light_green: #ABD147;
+$yellow: #FBAA1C;
+$orange: #F86A1E;
+$red: #EF3E36;
+
+.da-results {
+
+}
+
+.da-results-header {
+    padding: 10px;
+    border: 1px solid $almost_white;
+
+    &.shopping {
+        color: black;
+        background-color: $green;
+    }
+
+    &.post {
+        color: black;
+        background-color: $light_green;
+    }
+
+    &.form {
+        color: black;
+        background-color: $yellow;
+    }
+
+    &.download {
+        color: black;
+        background-color: $red;
+    }
+}
+
+.da-results-cell {
+    padding: 10px;
+    border: 1px solid $light_grey;
+}

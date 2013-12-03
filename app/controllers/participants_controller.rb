@@ -1,6 +1,29 @@
 class ParticipantsController < ApplicationController
 
   def index
+    if current_participant.nil?
+      redirect_to "/login"
+    elsif  current_participant.group != 'C'
+      redirect_to current_participant
+    end
+
+    @participants = {
+      :A => Participant.where(:group => 'A'),
+      :B => Participant.where(:group => 'B')
+    }
+
+    @tasks = Task.all
+
+    @activities = []
+
+    @tasks.each do |task|
+      info = YAML.load_file('public/tasks/task_' + task.id.to_s + '.yaml')
+
+      @activities.push(info['activities'])
+    end
+  end
+
+  def new
     @participant = Participant.new
   end
 

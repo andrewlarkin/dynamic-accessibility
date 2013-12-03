@@ -1,69 +1,63 @@
 <% content_for :body do %>
-    <h2 class="da-h2">Register To Become a Participant</h2>
+    <% types = ['post', 'shopping', 'form', 'download'] %>
+    <% metrics = ['time', 'error_rate', 'success_rate'] %>
 
-    <p>By completing this form, you are submitting yourself to be considered as a participant for a two-week trial that will seek to investigate the effectiveness of a new technique for improving user interfaces on the Internet.  Please understand that, by completing this form, you are not obligating yourself in any way to participate in this trial.  Also understand that completing this form does not guarantee participation in the trial, as participants will be selected so as to maintain an even distribution of age, technical expertise and ability.</p> 
-
-    <h3 class="da-h3">What is the commitment?</h3>
-    <P>If selected, you will be asked to commit to a two-week trial that will involve completing a series of tasks on a website.  These tasks will be sent via e-mail and will need to be completed within a 24 hour period.  Participants will not be asked to complete more than one task at a time, and completion of the task should require no longer than 20 minutes.</p>
-
-    <h3 class="da-h3">Will there be any compensation?</h3>
-    <p>While there is no direct compensation for participating in this trial, the data gained by your participation will be used to improve the usability of the web for all users.</p> 
-
-
-    <h3 class="da-h3">Fill out the form to register:</h3>
-    <% if @participant.errors.any? %>
-      <div class="da-form-errors">
-        <h4><%= pluralize(@participant.errors.count, "error") %> present:</h4>
-     
-        <ol class="da-list">
-        <% @participant.errors.full_messages.each do |msg| %>
-          <li class="da-list-item"><%= msg %></li>
+    <% @participants.each do |group, participant| %>
+        <h2 class="da-h2">Group <%= group %></h2>
+        <table class="da-results">
+            <tr>
+                <th class="da-results-header" rowspan="3">ID</th>
+                <th class="da-results-header" rowspan="3">Email</th>
+                <th class="da-results-header" rowspan="3">Age</th>
+                <th class="da-results-header" rowspan="3">Device</th>
+                <th class="da-results-header" colspan="4">Score</th>
+                <% @tasks.each do |task| %>
+                    <th class="da-results-header" colspan="<%= task.count*3 %>"><%= task.name %></th>
+                <% end %>
+            </tr>
+            <tr>
+                <% types.each do |type| %>
+                    <th class="da-results-header <%= type %>" rowspan="2"><%= type %></th>
+                <% end %>
+                <% @tasks.each_with_index do |task, index| %>
+                    <% task.count.times do |i| %>
+                        <th class="da-results-header <%= @activities[index][i]['type'] %>"  colspan="3"><%= i + 1 %></th>
+                    <% end %>
+                <% end %>
+            </tr>
+            <tr>
+                <% @tasks.each_with_index do |task, index| %>
+                    <% task.count.times do |i| %>
+                        <th class="da-results-header <%= @activities[index][i]['type'] %>" >T</th>
+                        <th class="da-results-header <%= @activities[index][i]['type'] %>" >E</th>
+                        <th class="da-results-header <%= @activities[index][i]['type'] %>" >C</th>
+                    <% end %>
+                <% end %>
+            </tr>
+        <% participant.each do |p| %>
+            <% if p.is_selected && p.consent %>
+                <tr>
+                    <td class="da-results-cell"><%= p.id %></td>
+                    <td class="da-results-cell"><%= p.email %></td>
+                    <td class="da-results-cell"><%= p.age %></td>
+                    <td class="da-results-cell"><%= p.device %></td>
+                    <% types.each do |type| %>
+                        <% score = p.scores.where(:activity_type => type).first %>
+                        <td class="da-results-cell"><%= score.nil? ? '' : score.score %></td>
+                    <% end %>
+                    <% @tasks.each_with_index do |task, index| %>
+                        <% task.count.times do |i| %>
+                            <% completed_task = p.completed_tasks.where(:activity_id => i).first %>
+                            <% if !completed_task.nil? %>
+                                <% metrics.each do |m| %>
+                                    <td class="da-results-cell"><%= completed_task[m] %></td>
+                                <% end %>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </tr>
+            <% end %>
         <% end %>
-        </ol>
-      </div>
+        </table>
     <% end %>
-    <%= form_for(@participant, :remote => true) do |f| %>
-
-        <ol class="da-list">
-            <li class="da-list-item">
-                <%= f.label :age, :class => 'da-form-label' %>
-                <%= f.text_field :age, :class => 'da-input', :'aria-required' => true %>
-            </li>
-
-            <li class="da-list-item">
-                <%= f.label :email, :class => 'da-form-label' %>
-                <%= f.email_field :email, :class => 'da-input', :'aria-required' => true %>
-            </li>
-
-            <li class="da-list-item">
-                <%= f.label :password, :class => 'da-form-label' %>
-                <%= f.password_field :password, :class => 'da-input', :'aria-required' => true %>
-            </li>
-
-            <li class="da-list-item">
-                <%= f.label :password_confirmation, :class => 'da-form-label' %>
-                <%= f.password_field :password_confirmation, :class => 'da-input', :'aria-required' => true %>
-            </li>
-
-            <li class="da-list-item">
-                <%= f.label :tech_ability, :class => 'da-form-label' %>
-                <%= f.select :tech_ability, options_for_select([['Novice', 1], ['Beginner', 2], ['Intermediate', 3], ['Proficient', 4], ['Expert', 5]]) %>
-            </li>
-
-            <li class="da-list-item">
-                <%= f.label :device, :class => 'da-form-label' %>
-                <%= f.select :device, options_for_select([
-                    ['Smartphone', 'smartphone'],
-                    ['Tablet', 'tablet'],
-                    ['Desktop / Laptop', 'desktop'],
-                    ['Other Device', 'other']
-                ]) %>
-            </li>
-        </ol>
-
-        <button class="da-button" type="submit" value="submit" alt="Submit your information">Submit</button>
-    <% end %>
-
-    <p>If you have any questions or concerns please contact Andrew Larkin at <a href="mailto:alarkin2@villanova.edu" target="_blank">alarkin2@villanova.edu</a></p>
-
 <% end %>

@@ -14,7 +14,7 @@ DynamicAccessibility::Application.routes.draw do
 
   post 'submit' => 'tasks#update'
 
-  get 'register' => 'participants#index'
+  get 'register' => 'participants#new'
 
   get 'about' => 'main#about'
   get 'resources' => 'main#resources'
