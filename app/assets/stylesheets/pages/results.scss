@@ -9,7 +9,11 @@ $orange: #F86A1E;
 $red: #EF3E36;
 
 .da-results {
+    table-layout: fixed;
 
+    tr {
+        width: 100%;
+    }
 }
 
 .da-results-header {
@@ -35,6 +39,15 @@ $red: #EF3E36;
         color: black;
         background-color: $red;
     }
+}
+
+.da-results-email {
+    width: 300px;
+}
+
+.da-results-metrics {
+    width: 300px;
+    overflow: hidden;
 }
 
 .da-results-cell {

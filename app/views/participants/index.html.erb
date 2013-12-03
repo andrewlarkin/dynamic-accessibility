@@ -2,74 +2,73 @@
     <% types = ['post', 'shopping', 'form', 'download'] %>
     <% metrics = ['time', 'error_rate', 'success_rate'] %>
 
+    <table class="da-results">
     <% @participants.each do |group, participant| %>
-        <h2 class="da-h2">Group <%= group %></h2>
-        <table class="da-results">
-            <tr>
-                <th class="da-results-header" rowspan="3">ID</th>
-                <th class="da-results-header" rowspan="3">Email</th>
-                <th class="da-results-header" rowspan="3">Age</th>
-                <th class="da-results-header" rowspan="3">Device</th>
-                <th class="da-results-header" colspan="4">Score</th>
-                <% @tasks.each do |task| %>
-                    <th class="da-results-header" colspan="<%= task.count*3 %>"><%= task.name %></th>
-                <% end %>
-            </tr>
-            <tr>
-                <% types.each do |type| %>
-                    <th class="da-results-header <%= type %>" rowspan="2"><%= type %></th>
-                <% end %>
-                <% @tasks.each_with_index do |task, index| %>
-                    <% task.count.times do |i| %>
-                        <th class="da-results-header <%= @activities[index][i]['type'] %>"  colspan="3"><%= i + 1 %></th>
-                    <% end %>
-                <% end %>
-            </tr>
-            <tr>
-                <% @tasks.each_with_index do |task, index| %>
-                    <% task.count.times do |i| %>
-                        <th class="da-results-header <%= @activities[index][i]['type'] %>" >T</th>
-                        <th class="da-results-header <%= @activities[index][i]['type'] %>" >E</th>
-                        <th class="da-results-header <%= @activities[index][i]['type'] %>" >C</th>
-                    <% end %>
-                <% end %>
-            </tr>
-            <% participant.each do |p| %>
-                <% if p.is_selected && p.consent %>
-                    <tr>
-                        <td class="da-results-cell"><%= p.id %></td>
-                        <td class="da-results-cell"><%= p.email %></td>
-                        <td class="da-results-cell"><%= p.age %></td>
-                        <td class="da-results-cell"><%= p.device %></td>
-                        <% types.each do |type| %>
-                            <% score = p.scores.where(:activity_type => type).first %>
-                            <td class="da-results-cell"><%= score.nil? ? '' : score.score %></td>
-                        <% end %>
-                        <% @tasks.each_with_index do |task, index| %>
-                            <% task.count.times do |i| %>
-                                <% completed_task = p.completed_tasks.where(:activity_id => i, :task_id => task.id).first %>
-                                <% metrics.each do |m| %>
-                                    <td class="da-results-cell"><%= completed_task.nil? ? '' : completed_task[m] %></td>
-                                <% end %>
-                            <% end %>
-                        <% end %>
-                    </tr>
+        <tr>
+            <th class="da-results-header" rowspan="3">ID</th>
+            <th class="da-results-header" rowspan="3">Email</th>
+            <th class="da-results-header" rowspan="3">Age</th>
+            <th class="da-results-header" rowspan="3">Device</th>
+            <th class="da-results-header" colspan="4">Score</th>
+            <% @tasks.each do |task| %>
+                <th class="da-results-header" colspan="<%= task.count*3 %>"><%= task.name %></th>
+            <% end %>
+        </tr>
+        <tr>
+            <% types.each do |type| %>
+                <th class="da-results-header <%= type %>" rowspan="2"><%= type %></th>
+            <% end %>
+            <% @tasks.each_with_index do |task, index| %>
+                <% task.count.times do |i| %>
+                    <th class="da-results-header <%= @activities[index][i]['type'] %>"  colspan="3"><%= i + 1 %></th>
                 <% end %>
             <% end %>
-            <tr>
-                <td class="da-results-cell" colspan="4">Averages</td>
-                <% types.each do |type| %>
-                    <td class="da-results-cell"></td>
+        </tr>
+        <tr>
+            <% @tasks.each_with_index do |task, index| %>
+                <% task.count.times do |i| %>
+                    <th class="da-results-header <%= @activities[index][i]['type'] %>" >T</th>
+                    <th class="da-results-header <%= @activities[index][i]['type'] %>" >E</th>
+                    <th class="da-results-header <%= @activities[index][i]['type'] %>" >C</th>
                 <% end %>
-                <% @tasks.each_with_index do |task, index| %>
-                    <% task.count.times do |i| %>
-                        <% completed_task = task.completed_tasks.where('activity_id = ? AND participant_id in (?)', i, participant.ids) %>
-                            <% metrics.each do |m| %>
-                                <td class="da-results-cell"><%= completed_task.nil? ? '' : completed_task.average(m) %></td>
-                            <% end %>
+            <% end %>
+        </tr>
+        <% participant.each do |p| %>
+            <% if p.is_selected && p.consent %>
+                <tr>
+                    <td class="da-results-cell"><%= p.id %></td>
+                    <td class="da-results-cell"><%= p.email %></td>
+                    <td class="da-results-cell"><%= p.age %></td>
+                    <td class="da-results-cell"><%= p.device %></td>
+                    <% types.each do |type| %>
+                        <% score = p.scores.where(:activity_type => type).first %>
+                        <td class="da-results-cell"><%= score.nil? ? '' : score.score %></td>
                     <% end %>
+                    <% @tasks.each_with_index do |task, index| %>
+                        <% task.count.times do |i| %>
+                            <% completed_task = p.completed_tasks.where(:activity_id => i, :task_id => task.id).first %>
+                            <% metrics.each do |m| %>
+                                <td class="da-results-cell da-results-metrics"><%= completed_task.nil? ? '' : completed_task[m] %></td>
+                            <% end %>
+                        <% end %>
+                    <% end %>
+                </tr>
+            <% end %>
+        <% end %>
+        <tr>
+            <td class="da-results-cell" colspan="4">Averages</td>
+            <% types.each do |type| %>
+                <td class="da-results-cell"></td>
+            <% end %>
+            <% @tasks.each_with_index do |task, index| %>
+                <% task.count.times do |i| %>
+                    <% completed_task = task.completed_tasks.where('activity_id = ? AND participant_id in (?)', i, participant.ids) %>
+                        <% metrics.each do |m| %>
+                            <td class="da-results-cell"><%= completed_task.nil? ? '' : completed_task.average(m) %></td>
+                        <% end %>
                 <% end %>
-            </tr>    
-        </table>
+            <% end %>
+        </tr>    
     <% end %>
+    </table>
 <% end %>
